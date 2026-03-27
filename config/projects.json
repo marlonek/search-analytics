@@ -1,0 +1,35 @@
+{
+  "projects": [
+    {
+      "id": "warsawhubhotelspl",
+      "name": "warsawhubhotels.pl",
+      "domain": "warsawhubhotels.pl",
+      "daily_clicks": 1,
+      "action_delay_seconds": 20,
+      "keywords": [
+        "https://warsawhubhotels.pl",
+        "warsawhubhotels.pl",
+        "Warsaw hub hotels"
+        "ciekawostki o hotelach"
+        "informacje o hotelach"
+        "co warto wiedzieć o hotelach"
+        "wszystko o hotelach"
+      ]
+    },
+    {
+      "id": "pantomogram24pl",
+      "name": "pantomogram24.pl",
+      "domain": "pantomogram24.pl",
+      "daily_clicks": 1,
+      "action_delay_seconds": 15,
+      "keywords": [
+        "https://pantomogram24.pl",
+        "pantomogram24.pl"
+        "rtg zębów",
+        "rentgen zębów"
+        "pantomogram",
+        "pantomogram zębów"
+      ]
+    }
+  ]
+}
