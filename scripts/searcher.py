@@ -9,8 +9,8 @@ from playwright.sync_api import sync_playwright
 # ── Limity i zabezpieczenia ──────────────────────────────────────────────────
 # Ustaw MAX_DAILY_TOTAL = suma daily_clicks wszystkich projektow + 20-30% buforu
 # Przyklad: 2 projekty po 3 klikniecia = 6, wiec ustaw 8
-MAX_DAILY_TOTAL = 4         # <-- ZMIEN NA SWOJA WARTOSC przed uruchomieniem
-MAX_ACTIONS_PER_RUN = 3     # tyle ile masz projektów
+MAX_DAILY_TOTAL = 6         # <-- ZMIEN NA SWOJA WARTOSC przed uruchomieniem
+MAX_ACTIONS_PER_RUN = 3      # max akcji w jednym uruchomieniu crona
 
 # ── Godziny dzialania (czas lokalny serwera = UTC, Warsaw = UTC+1 lub UTC+2) ─
 # Cron w workflow uruchamia sie co godzine miedzy 6:00-23:00 UTC (7:00-00:00 Warsaw)
@@ -222,77 +222,117 @@ def search_and_click(page, keyword, domain, action_delay):
     page.wait_for_load_state("networkidle", timeout=30000)
     time.sleep(random.uniform(2.0, 4.5))
 
-    # ── WYKRYJ POZYCJE DOMENY W WYNIKACH GOOGLE ──────────────────────────
+    # ── DEBUG: zapisz screenshot i HTML zeby zobaczyc co bot widzi ────────
     try:
-        # Google opakowuje linki w /url?q=https://domena.pl...
-        # Szukamy wszystkich wynikow organicznych po kontenerach
-        all_result_links = page.locator('div#search div.g a[href], div#rso div.g a[href]').all()
-        organic_hrefs = []
-        for r in all_result_links:
+        Path("data").mkdir(exist_ok=True)
+        page.screenshot(path="data/debug_last_search.png", full_page=False)
+        # Zapisz tez fragment HTML zeby zobaczyc strukture
+        html_snippet = page.content()[:3000]
+        Path("data/debug_last_html.txt").write_text(html_snippet, encoding="utf-8")
+        print(f"  → Debug screenshot zapisany: data/debug_last_search.png")
+    except Exception as e:
+        print(f"  → Debug screenshot blad: {e}")
+
+    # ── WYKRYJ POZYCJE I ZNAJDZ LINK DO DOMENY ───────────────────────────
+    # Podejscie uniwersalne: przeszukaj WSZYSTKIE linki na stronie wynikow
+    # Google headless moze uzywac roznych struktur HTML
+    target = None
+    position = None
+
+    try:
+        # Pobierz wszystkie linki na stronie
+        all_links = page.locator("a[href]").all()
+        domain_links = []
+        all_organic = []
+
+        for link in all_links:
             try:
-                href = r.get_attribute("href") or ""
-                # Pomij linki google i javascript
-                if href.startswith("http") and "google.com" not in href:
-                    if href not in organic_hrefs:
-                        organic_hrefs.append(href)
+                href = link.get_attribute("href") or ""
+                # Zbierz organiczne wyniki (nie-google, nie-javascript)
+                if (href.startswith("http")
+                        and "google.com" not in href
+                        and "google.pl" not in href
+                        and "javascript" not in href
+                        and link.is_visible()):
+                    all_organic.append(href)
+                    if domain in href:
+                        domain_links.append(link)
             except Exception:
                 pass
 
-        position = None
-        for i, href in enumerate(organic_hrefs, start=1):
+        print(f"  → Znaleziono {len(all_organic)} linkow organicznych na stronie")
+        print(f"  → Linki do {domain}: {len(domain_links)}")
+
+        # Ustal pozycje domeny
+        for i, href in enumerate(all_organic, start=1):
             if domain in href:
                 position = i
                 break
 
         result["position"] = position
         if position:
-            print(f"  → Pozycja {domain} w wynikach: #{position}")
-        else:
-            print(f"  → Nie wykryto pozycji automatycznie")
+            print(f"  → Pozycja {domain}: #{position}")
+
+        # Metoda 1: bezposredni link do domeny
+        if domain_links:
+            target = domain_links[0]
+            print(f"  → Metoda 1: bezposredni link do domeny")
+
     except Exception as e:
-        print(f"  → Blad wykrywania pozycji: {e}")
+        print(f"  → Blad skanowania linkow: {e}")
 
-    # ── ZNAJDZ I KLIKNIJ LINK DO NASZEJ DOMENY ───────────────────────────
-    # Google uzywa przekierowan /url?q=... wiec szukamy po data-href lub po tekscie URL
-    target = None
-
-    # Metoda 1: bezposredni href zawierajacy domene
-    links_direct = page.locator(f'a[href*="{domain}"]').all()
-    visible_direct = [l for l in links_direct if l.is_visible()]
-    if visible_direct:
-        target = visible_direct[0]
-        print(f"  → Znaleziono link bezposredni do {domain}")
-
-    # Metoda 2: kontener wynikow Google z cytatem URL domeny (cite tag)
+    # Metoda 2: cite tag zawierajacy nazwe domeny
     if not target:
         try:
             cite_elements = page.locator(f'cite:has-text("{domain}")').all()
+            print(f"  → Cite elementow z domena: {len(cite_elements)}")
             for cite in cite_elements:
-                parent_link = cite.locator("xpath=ancestor::a").first
-                if parent_link.is_visible():
-                    target = parent_link
-                    print(f"  → Znaleziono link przez cite tag")
-                    break
-        except Exception:
-            pass
+                try:
+                    # Idz w gore drzewa DOM szukajac najblizszego <a>
+                    parent = cite.locator("xpath=ancestor::a[1]").first
+                    if parent.count() > 0 and parent.is_visible():
+                        target = parent
+                        print(f"  → Metoda 2: cite tag")
+                        break
+                except Exception:
+                    pass
+        except Exception as e:
+            print(f"  → Blad metody cite: {e}")
 
-    # Metoda 3: znajdz kontener wyniku zawierajacy domene i kliknij jego link
+    # Metoda 3: szukaj po tekscie widocznym na stronie
     if not target:
         try:
-            result_containers = page.locator('div#search .g, div#rso .g').all()
-            for container in result_containers:
-                text = container.inner_text()
-                if domain in text:
-                    link = container.locator("a[href]").first
-                    if link.is_visible():
-                        target = link
-                        print(f"  → Znaleziono link przez kontener wyniku")
+            # Szukaj elementow zawierajacych tekst domeny
+            text_matches = page.locator(f'text="{domain}"').all()
+            print(f"  → Elementow z tekstem domeny: {len(text_matches)}")
+            for el in text_matches:
+                try:
+                    parent = el.locator("xpath=ancestor::a[1]").first
+                    if parent.count() > 0 and parent.is_visible():
+                        target = parent
+                        print(f"  → Metoda 3: tekst domeny")
                         break
-        except Exception:
-            pass
+                except Exception:
+                    pass
+        except Exception as e:
+            print(f"  → Blad metody tekst: {e}")
+
+    # Metoda 4: ostatnia szansa - kliknij pierwszy organiczny link na stronie
+    # (dziala gdy domena jest na #1 pozycji)
+    if not target and position == 1:
+        try:
+            first_links = page.locator("a[href^='http']").all()
+            for link in first_links:
+                href = link.get_attribute("href") or ""
+                if "google" not in href and link.is_visible():
+                    target = link
+                    print(f"  → Metoda 4: pierwszy organiczny link (pozycja #1)")
+                    break
+        except Exception as e:
+            print(f"  → Blad metody 4: {e}")
 
     if not target:
-        print(f"  ✗ Nie znaleziono {domain} dla frazy: '{keyword}' - zadna metoda nie zadziałała")
+        print(f"  ✗ Nie znaleziono {domain} - sprawdz data/debug_last_search.png")
         return result
     target.scroll_into_view_if_needed()
     time.sleep(random.uniform(0.8, 2.0))
