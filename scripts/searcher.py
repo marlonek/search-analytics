@@ -9,7 +9,7 @@ from playwright.sync_api import sync_playwright
 # ── Limity i zabezpieczenia ──────────────────────────────────────────────────
 # Ustaw MAX_DAILY_TOTAL = suma daily_clicks wszystkich projektow + 20-30% buforu
 # Przyklad: 2 projekty po 3 klikniecia = 6, wiec ustaw 8
-MAX_DAILY_TOTAL = 4         # <-- ZMIEN NA SWOJA WARTOSC przed uruchomieniem
+MAX_DAILY_TOTAL = 10         # <-- ZMIEN NA SWOJA WARTOSC przed uruchomieniem
 MAX_ACTIONS_PER_RUN = 2      # max akcji w jednym uruchomieniu crona
 
 # ── Godziny dzialania (czas lokalny serwera = UTC, Warsaw = UTC+1 lub UTC+2) ─
@@ -223,22 +223,23 @@ def search_and_click(page, keyword, domain, action_delay):
     time.sleep(random.uniform(2.0, 4.5))
 
     # ── WYKRYJ POZYCJE DOMENY W WYNIKACH GOOGLE ──────────────────────────
-    # Pobierz wszystkie wyniki organiczne i znajdz pozycje naszej domeny
     try:
-        # Selektory dla wynikow organicznych Google
-        all_results = page.locator('div#search a[href^="http"]').all()
-        all_hrefs = []
-        for r in all_results:
+        # Google opakowuje linki w /url?q=https://domena.pl...
+        # Szukamy wszystkich wynikow organicznych po kontenerach
+        all_result_links = page.locator('div#search div.g a[href], div#rso div.g a[href]').all()
+        organic_hrefs = []
+        for r in all_result_links:
             try:
-                href = r.get_attribute("href")
-                if href and not any(x in href for x in ["google.com", "googleadservices", "javascript"]):
-                    all_hrefs.append(href)
+                href = r.get_attribute("href") or ""
+                # Pomij linki google i javascript
+                if href.startswith("http") and "google.com" not in href:
+                    if href not in organic_hrefs:
+                        organic_hrefs.append(href)
             except Exception:
                 pass
 
-        # Znajdz pozycje naszej domeny (liczac od 1)
         position = None
-        for i, href in enumerate(all_hrefs, start=1):
+        for i, href in enumerate(organic_hrefs, start=1):
             if domain in href:
                 position = i
                 break
@@ -247,19 +248,52 @@ def search_and_click(page, keyword, domain, action_delay):
         if position:
             print(f"  → Pozycja {domain} w wynikach: #{position}")
         else:
-            print(f"  → Nie wykryto pozycji (domena moze byc w reklamach lub poza top 10)")
+            print(f"  → Nie wykryto pozycji automatycznie")
     except Exception as e:
         print(f"  → Blad wykrywania pozycji: {e}")
 
     # ── ZNAJDZ I KLIKNIJ LINK DO NASZEJ DOMENY ───────────────────────────
-    links = page.locator(f'a[href*="{domain}"]').all()
-    visible_links = [l for l in links if l.is_visible()]
+    # Google uzywa przekierowan /url?q=... wiec szukamy po data-href lub po tekscie URL
+    target = None
 
-    if not visible_links:
-        print(f"  ✗ Nie znaleziono {domain} dla frazy: '{keyword}'")
-        return result  # status pozostaje 'not_found'
+    # Metoda 1: bezposredni href zawierajacy domene
+    links_direct = page.locator(f'a[href*="{domain}"]').all()
+    visible_direct = [l for l in links_direct if l.is_visible()]
+    if visible_direct:
+        target = visible_direct[0]
+        print(f"  → Znaleziono link bezposredni do {domain}")
 
-    target = visible_links[0]
+    # Metoda 2: kontener wynikow Google z cytatem URL domeny (cite tag)
+    if not target:
+        try:
+            cite_elements = page.locator(f'cite:has-text("{domain}")').all()
+            for cite in cite_elements:
+                parent_link = cite.locator("xpath=ancestor::a").first
+                if parent_link.is_visible():
+                    target = parent_link
+                    print(f"  → Znaleziono link przez cite tag")
+                    break
+        except Exception:
+            pass
+
+    # Metoda 3: znajdz kontener wyniku zawierajacy domene i kliknij jego link
+    if not target:
+        try:
+            result_containers = page.locator('div#search .g, div#rso .g').all()
+            for container in result_containers:
+                text = container.inner_text()
+                if domain in text:
+                    link = container.locator("a[href]").first
+                    if link.is_visible():
+                        target = link
+                        print(f"  → Znaleziono link przez kontener wyniku")
+                        break
+        except Exception:
+            pass
+
+    if not target:
+        print(f"  ✗ Nie znaleziono {domain} dla frazy: '{keyword}' - zadna metoda nie zadziałała")
+        return result
     target.scroll_into_view_if_needed()
     time.sleep(random.uniform(0.8, 2.0))
     target.click()
