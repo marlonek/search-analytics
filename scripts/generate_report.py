@@ -136,11 +136,12 @@ body {{ font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif; back
 .metric-label {{ font-size:12px; color:#64748b; margin-bottom:4px; }}
 .metric-value {{ font-size:26px; font-weight:600; color:#1e293b; }}
 .metric-sub {{ font-size:11px; color:#94a3b8; margin-top:2px; }}
-.grid2 {{ display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:16px; }}
-.card {{ background:white; border:1px solid #e2e8f0; border-radius:10px; padding:20px; }}
+.grid2 {{ display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:16px; align-items:start; }}
+.card {{ background:white; border:1px solid #e2e8f0; border-radius:10px; padding:20px; min-height:0; }}
 .card-title {{ font-size:12px; font-weight:600; color:#64748b; text-transform:uppercase; letter-spacing:0.05em; margin-bottom:14px; }}
-table {{ width:100%; border-collapse:collapse; }}
-th {{ font-size:11px; color:#94a3b8; font-weight:500; padding:8px 12px; border-bottom:1px solid #f1f5f9; text-align:left; }}
+table {{ width:100%; border-collapse:collapse; table-layout:fixed; }}
+th {{ font-size:11px; color:#94a3b8; font-weight:500; padding:8px 12px; border-bottom:1px solid #f1f5f9; text-align:left; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }}
+td {{ overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }}
 tr:hover td {{ background:#f8fafc; }}
 .tabs {{ display:flex; gap:4px; border-bottom:1px solid #e2e8f0; margin-bottom:16px; }}
 .tab {{ padding:8px 16px; font-size:13px; cursor:pointer; color:#64748b; border-bottom:2px solid transparent; margin-bottom:-1px; }}
@@ -205,7 +206,7 @@ tr:hover td {{ background:#f8fafc; }}
       </div>
       <div class="card">
         <div class="card-title">Ostatnie 7 dni</div>
-        <canvas id="weekChart" style="width:100%;height:200px;"></canvas>
+        <div style="position:relative;height:200px;width:100%;"><canvas id="weekChart"></canvas></div>
       </div>
     </div>
   </div>
