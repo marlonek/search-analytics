@@ -45,11 +45,18 @@ def today():
 
 
 def clicks_today(data, project_id):
-    return sum(1 for c in data["clicks"] if c["project_id"] == project_id and c["date"] == today())
+    """Liczy tylko SKUTECZNE klikniecia dzisiaj (status=ok). not_found nie wlicza sie do limitu."""
+    return sum(1 for c in data["clicks"]
+               if c["project_id"] == project_id
+               and c["date"] == today()
+               and c.get("status") == "ok")
 
 
 def total_clicks_today(data):
-    return sum(1 for c in data["clicks"] if c["date"] == today())
+    """Liczy tylko SKUTECZNE klikniecia dzisiaj (status=ok)."""
+    return sum(1 for c in data["clicks"]
+               if c["date"] == today()
+               and c.get("status") == "ok")
 
 
 def is_operating_hours():
@@ -438,54 +445,71 @@ def main():
             keyword = pick_keyword(project, data)
             print(f"\n[{pid}] Fraza: '{keyword}' → {domain} ({done_today+1}/{daily_limit} dzis)")
 
-            # Osobny kontekst przegladarki dla kazdego projektu
-            context = p.chromium.launch(
-                headless=True,
-                args=[
-                    "--no-sandbox",
-                    "--disable-blink-features=AutomationControlled",
-                    "--disable-dev-shm-usage",
-                ]
-            ).new_context(
-                viewport=random_viewport(),
-                user_agent=random_user_agent(),
-                locale="pl-PL",
-                timezone_id="Europe/Warsaw",
-            )
-            page = context.new_page()
+            # ── RETRY: max 3 proby dla tego projektu ─────────────────────
+            MAX_RETRIES = 3
+            success = False
 
-            # Ukryj ze to Playwright (dodatkowe zabezpieczenie)
-            page.add_init_script("""
-                Object.defineProperty(navigator, 'webdriver', { get: () => undefined });
-                Object.defineProperty(navigator, 'plugins', { get: () => [1, 2, 3] });
-            """)
+            for attempt in range(1, MAX_RETRIES + 1):
+                if attempt > 1:
+                    # Zmien fraze przy ponownej probie
+                    keyword = pick_keyword(project, data)
+                    wait = random.uniform(15, 30)
+                    print(f"  → Proba {attempt}/{MAX_RETRIES}, fraza: '{keyword}', czekam {wait:.0f}s...")
+                    time.sleep(wait)
 
-            result = search_and_click(page, keyword, domain, delay)
-            context.browser.close()
+                # Osobny kontekst przegladarki dla kazdej proby
+                context = p.chromium.launch(
+                    headless=True,
+                    args=[
+                        "--no-sandbox",
+                        "--disable-blink-features=AutomationControlled",
+                        "--disable-dev-shm-usage",
+                    ]
+                ).new_context(
+                    viewport=random_viewport(),
+                    user_agent=random_user_agent(),
+                    locale="pl-PL",
+                    timezone_id="Europe/Warsaw",
+                )
+                page = context.new_page()
+                page.add_init_script("""
+                    Object.defineProperty(navigator, 'webdriver', { get: () => undefined });
+                    Object.defineProperty(navigator, 'plugins', { get: () => [1, 2, 3] });
+                """)
 
-            click_record = {
-                "project_id": pid,
-                "project_name": project["name"],
-                "domain": domain,
-                "keyword": keyword,
-                "date": today(),
-                "timestamp": now_iso,
-                "status": result["status"],
-                "position": result["position"],           # pozycja w Google (int lub null)
-                "pages_visited": result["pages_visited"]  # lista odwiedzonych URL
-            }
+                result = search_and_click(page, keyword, domain, delay)
+                context.browser.close()
 
-            data["clicks"].append(click_record)
-
-            if result["status"] == "ok":
-                data["last_keywords"][pid] = keyword
-                actions_this_run += 1
+                # Zawsze zapisz probe (ok lub not_found) dla historii
+                click_record = {
+                    "project_id": pid,
+                    "project_name": project["name"],
+                    "domain": domain,
+                    "keyword": keyword,
+                    "date": today(),
+                    "timestamp": datetime.datetime.now().isoformat(timespec="seconds"),
+                    "status": result["status"],
+                    "position": result["position"],
+                    "pages_visited": result["pages_visited"],
+                    "attempt": attempt
+                }
+                data["clicks"].append(click_record)
                 save_data(data)
-                print(f"  ✓ Zapisano. Pozycja: #{result['position']}, Podstron: {len(result['pages_visited'])}")
-            else:
-                save_data(data)
 
-            # Przerwa miedzy projektami - losowa, dluzsza niz dotychczas
+                if result["status"] == "ok":
+                    data["last_keywords"][pid] = keyword
+                    actions_this_run += 1
+                    save_data(data)
+                    print(f"  ✓ Sukces w probie {attempt}! Pozycja: #{result['position']}, Podstron: {len(result['pages_visited'])}")
+                    success = True
+                    break
+                else:
+                    print(f"  ✗ Proba {attempt}/{MAX_RETRIES} nieudana - not_found")
+
+            if not success:
+                print(f"  ✗ Wszystkie {MAX_RETRIES} proby nieudane dla {domain}")
+
+            # Przerwa miedzy projektami
             if actions_this_run < MAX_ACTIONS_PER_RUN:
                 pause = random.uniform(45, 120)
                 print(f"  Przerwa {pause:.0f}s przed kolejnym projektem...")
