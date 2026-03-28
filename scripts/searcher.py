@@ -9,7 +9,7 @@ from playwright.sync_api import sync_playwright
 # ── Limity i zabezpieczenia ──────────────────────────────────────────────────
 # Ustaw MAX_DAILY_TOTAL = suma daily_clicks wszystkich projektow + 20-30% buforu
 # Przyklad: 2 projekty po 3 klikniecia = 6, wiec ustaw 8
-MAX_DAILY_TOTAL = 10         # <-- ZMIEN NA SWOJA WARTOSC przed uruchomieniem
+MAX_DAILY_TOTAL = 4         # <-- ZMIEN NA SWOJA WARTOSC przed uruchomieniem
 MAX_ACTIONS_PER_RUN = 2      # max akcji w jednym uruchomieniu crona
 
 # ── Godziny dzialania (czas lokalny serwera = UTC, Warsaw = UTC+1 lub UTC+2) ─
