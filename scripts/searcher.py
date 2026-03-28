@@ -9,7 +9,7 @@ from playwright.sync_api import sync_playwright
 # ── Limity i zabezpieczenia ──────────────────────────────────────────────────
 # Ustaw MAX_DAILY_TOTAL = suma daily_clicks wszystkich projektow + 20-30% buforu
 # Przyklad: 2 projekty po 3 klikniecia = 6, wiec ustaw 8
-MAX_DAILY_TOTAL = 3         # <-- ZMIEN NA SWOJA WARTOSC przed uruchomieniem
+MAX_DAILY_TOTAL = 4         # <-- ZMIEN NA SWOJA WARTOSC przed uruchomieniem
 MAX_ACTIONS_PER_RUN = 2      # max akcji w jednym uruchomieniu crona
 
 # ── Godziny dzialania (czas lokalny serwera = UTC, Warsaw = UTC+1 lub UTC+2) ─
@@ -146,7 +146,10 @@ def scroll_page(page):
 
 
 def click_internal_link(page, domain):
-    """Klika losowy wewnetrzny link. Zwraca True jesli sukces."""
+    """
+    Klika losowy wewnetrzny link.
+    Zwraca URL odwiedzonej podstrony lub None jesli nie udalo sie kliknac.
+    """
     try:
         internal_links = page.locator(
             f'a[href*="{domain}"]:not([href*="#"]):not([href*="mailto"]):not([href*="tel"]), '
@@ -155,7 +158,7 @@ def click_internal_link(page, domain):
         clickable = [l for l in internal_links if l.is_visible()]
 
         if not clickable:
-            return False
+            return None
 
         chosen = random.choice(clickable[:15])
         chosen.scroll_into_view_if_needed()
@@ -163,21 +166,26 @@ def click_internal_link(page, domain):
         chosen.click()
         page.wait_for_load_state("networkidle", timeout=20000)
         time.sleep(random.uniform(2.0, 4.0))
-        return True
+        return page.url  # zwroc URL aktualnej strony po kliknieciu
     except Exception as e:
         print(f"  → Nie udalo sie kliknac linku: {e}")
-        return False
+        return None
 
 
 def search_and_click(page, keyword, domain, action_delay):
     """
     Wyszukaj fraze w Google i kliknij WYLACZNIE nasza domene.
-    Po wejsciu na strone:
-    - scrolluje strone symulujac czytanie (czas na stronie)
-    - klika 2-3 wewnetrzne linki (glebokosc sesji)
-    - na kazdej podstronie scrolluje i czeka
-    - nigdy nie wraca do Google
+    Zwraca slownik z danymi sesji:
+    - position: pozycja domeny w wynikach Google (1 = pierwsza)
+    - pages_visited: lista URL odwiedzonych podstron
+    - status: 'ok' lub 'not_found'
     """
+    result = {
+        "status": "not_found",
+        "position": None,
+        "pages_visited": []
+    }
+
     page.set_extra_http_headers({
         "Accept-Language": "pl-PL,pl;q=0.9,en-US;q=0.8,en;q=0.7",
         "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8",
@@ -214,25 +222,55 @@ def search_and_click(page, keyword, domain, action_delay):
     page.wait_for_load_state("networkidle", timeout=30000)
     time.sleep(random.uniform(2.0, 4.5))
 
-    # Znajdz link do NASZEJ domeny w wynikach
+    # ── WYKRYJ POZYCJE DOMENY W WYNIKACH GOOGLE ──────────────────────────
+    # Pobierz wszystkie wyniki organiczne i znajdz pozycje naszej domeny
+    try:
+        # Selektory dla wynikow organicznych Google
+        all_results = page.locator('div#search a[href^="http"]').all()
+        all_hrefs = []
+        for r in all_results:
+            try:
+                href = r.get_attribute("href")
+                if href and not any(x in href for x in ["google.com", "googleadservices", "javascript"]):
+                    all_hrefs.append(href)
+            except Exception:
+                pass
+
+        # Znajdz pozycje naszej domeny (liczac od 1)
+        position = None
+        for i, href in enumerate(all_hrefs, start=1):
+            if domain in href:
+                position = i
+                break
+
+        result["position"] = position
+        if position:
+            print(f"  → Pozycja {domain} w wynikach: #{position}")
+        else:
+            print(f"  → Nie wykryto pozycji (domena moze byc w reklamach lub poza top 10)")
+    except Exception as e:
+        print(f"  → Blad wykrywania pozycji: {e}")
+
+    # ── ZNAJDZ I KLIKNIJ LINK DO NASZEJ DOMENY ───────────────────────────
     links = page.locator(f'a[href*="{domain}"]').all()
     visible_links = [l for l in links if l.is_visible()]
 
     if not visible_links:
         print(f"  ✗ Nie znaleziono {domain} dla frazy: '{keyword}'")
-        return False
+        return result  # status pozostaje 'not_found'
 
-    # Kliknij link i wejdz na strone
     target = visible_links[0]
     target.scroll_into_view_if_needed()
     time.sleep(random.uniform(0.8, 2.0))
     target.click()
     page.wait_for_load_state("networkidle", timeout=30000)
     time.sleep(random.uniform(2.0, 4.0))
-    print(f"  → Weszlem na strone: {page.url}")
+
+    landing_url = page.url
+    result["pages_visited"].append(landing_url)
+    print(f"  → Strona 1 (landing): {landing_url}")
 
     # ── STRONA 1: scroll + czas ──────────────────────────────────────────
-    print(f"  → Scrolluje strone 1...")
     scroll_page(page)
     stay_1 = action_delay * 0.4 + random.uniform(3, 8)
     print(f"  → Czas na stronie 1: {stay_1:.0f}s")
@@ -240,8 +278,10 @@ def search_and_click(page, keyword, domain, action_delay):
 
     # ── STRONA 2: pierwszy wewnetrzny link ───────────────────────────────
     print(f"  → Klikam link wewnetrzny (strona 2)...")
-    if click_internal_link(page, domain):
-        print(f"  → Strona 2: {page.url}")
+    url2 = click_internal_link(page, domain)
+    if url2:
+        result["pages_visited"].append(url2)
+        print(f"  → Strona 2: {url2}")
         scroll_page(page)
         stay_2 = action_delay * 0.35 + random.uniform(2, 6)
         print(f"  → Czas na stronie 2: {stay_2:.0f}s")
@@ -250,15 +290,18 @@ def search_and_click(page, keyword, domain, action_delay):
         # ── STRONA 3: drugi wewnetrzny link (70% szans) ──────────────────
         if random.random() < 0.70:
             print(f"  → Klikam link wewnetrzny (strona 3)...")
-            if click_internal_link(page, domain):
-                print(f"  → Strona 3: {page.url}")
+            url3 = click_internal_link(page, domain)
+            if url3:
+                result["pages_visited"].append(url3)
+                print(f"  → Strona 3: {url3}")
                 scroll_page(page)
                 stay_3 = action_delay * 0.25 + random.uniform(2, 5)
                 print(f"  → Czas na stronie 3: {stay_3:.0f}s")
                 time.sleep(stay_3)
 
-    print(f"  ✓ Sesja zakonczona.")
-    return True
+    result["status"] = "ok"
+    print(f"  ✓ Sesja zakonczona. Odwiedzono {len(result['pages_visited'])} podstron.")
+    return result
 
 
 def main():
@@ -343,33 +386,29 @@ def main():
                 Object.defineProperty(navigator, 'plugins', { get: () => [1, 2, 3] });
             """)
 
-            success = search_and_click(page, keyword, domain, delay)
+            result = search_and_click(page, keyword, domain, delay)
             context.browser.close()
 
-            if success:
-                data["clicks"].append({
-                    "project_id": pid,
-                    "project_name": project["name"],
-                    "domain": domain,
-                    "keyword": keyword,
-                    "date": today(),
-                    "timestamp": now_iso,
-                    "status": "ok"
-                })
-                data["last_keywords"][pid] = keyword  # zapamietaj fraze
+            click_record = {
+                "project_id": pid,
+                "project_name": project["name"],
+                "domain": domain,
+                "keyword": keyword,
+                "date": today(),
+                "timestamp": now_iso,
+                "status": result["status"],
+                "position": result["position"],           # pozycja w Google (int lub null)
+                "pages_visited": result["pages_visited"]  # lista odwiedzonych URL
+            }
+
+            data["clicks"].append(click_record)
+
+            if result["status"] == "ok":
+                data["last_keywords"][pid] = keyword
                 actions_this_run += 1
-                save_data(data)  # zapisuj po kazdym sukcesie
-                print(f"  ✓ Sukces! Zapisano do danych.")
+                save_data(data)
+                print(f"  ✓ Zapisano. Pozycja: #{result['position']}, Podstron: {len(result['pages_visited'])}")
             else:
-                data["clicks"].append({
-                    "project_id": pid,
-                    "project_name": project["name"],
-                    "domain": domain,
-                    "keyword": keyword,
-                    "date": today(),
-                    "timestamp": now_iso,
-                    "status": "not_found"
-                })
                 save_data(data)
 
             # Przerwa miedzy projektami - losowa, dluzsza niz dotychczas
