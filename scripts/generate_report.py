@@ -51,18 +51,27 @@ def generate():
     # Recent logs (last 30)
     recent = sorted(clicks, key=lambda x: x.get("timestamp",""), reverse=True)[:30]
 
-    # Build keyword rows
+    # Build keyword rows - teraz z pozycja
     sorted_kw = sorted(kw_counts.items(), key=lambda x: x[1], reverse=True)
     max_cnt = sorted_kw[0][1] if sorted_kw else 1
+
+    # Srednia pozycja per fraza
+    kw_positions = defaultdict(list)
+    for c in clicks:
+        if c.get("position") and c.get("status") == "ok":
+            kw_positions[c["keyword"]].append(c["position"])
 
     kw_rows = ""
     for kw, cnt in sorted_kw[:20]:
         ok = kw_ok[kw]
         pct = round(cnt / max_cnt * 100)
         status_color = "#22c55e" if ok == cnt else "#f59e0b"
+        positions = kw_positions.get(kw, [])
+        avg_pos = f"#{round(sum(positions)/len(positions))}" if positions else "—"
+        pos_color = "#22c55e" if positions and min(positions) <= 3 else "#f59e0b" if positions and min(positions) <= 10 else "#64748b"
         kw_rows += f"""
         <tr>
-          <td style="padding:10px 12px;font-size:13px;color:#1e293b;">{kw}</td>
+          <td style="padding:10px 12px;font-size:13px;color:#1e293b;max-width:200px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">{kw}</td>
           <td style="padding:10px 12px;">
             <div style="display:flex;align-items:center;gap:8px;">
               <div style="flex:1;height:6px;background:#e2e8f0;border-radius:3px;">
@@ -71,9 +80,8 @@ def generate():
               <span style="font-size:13px;font-weight:600;min-width:20px;text-align:right;color:#1e293b;">{cnt}</span>
             </div>
           </td>
-          <td style="padding:10px 12px;text-align:center;">
-            <span style="font-size:12px;color:{status_color};font-weight:600;">{ok}/{cnt}</span>
-          </td>
+          <td style="padding:10px 12px;text-align:center;"><span style="font-size:12px;color:{status_color};font-weight:600;">{ok}/{cnt}</span></td>
+          <td style="padding:10px 12px;text-align:center;"><span style="font-size:12px;color:{pos_color};font-weight:600;">{avg_pos}</span></td>
         </tr>"""
 
     # Build project rows
@@ -83,27 +91,41 @@ def generate():
         s = proj_stats.get(pid, {"total":0,"today":0,"ok":0,"limit":p["daily_clicks"]})
         status_ok = s["today"] < s["limit"]
         badge = '<span style="background:#dcfce7;color:#166534;font-size:11px;padding:2px 8px;border-radius:99px;">aktywny</span>' if status_ok else '<span style="background:#fef9c3;color:#854d0e;font-size:11px;padding:2px 8px;border-radius:99px;">limit</span>'
+        proj_clicks = [c for c in clicks if c["project_id"] == pid and c.get("position")]
+        positions_proj = [c["position"] for c in proj_clicks if c.get("position")]
+        avg_pos_proj = f"#{round(sum(positions_proj)/len(positions_proj))}" if positions_proj else "—"
         proj_rows += f"""
         <tr>
           <td style="padding:10px 12px;font-size:13px;font-weight:500;color:#1e293b;">{p['name']}</td>
           <td style="padding:10px 12px;font-size:13px;color:#64748b;">{p['domain']}</td>
           <td style="padding:10px 12px;font-size:13px;text-align:center;">{s['today']} / {s['limit']}</td>
           <td style="padding:10px 12px;font-size:13px;text-align:center;color:#1e293b;">{s['total']}</td>
+          <td style="padding:10px 12px;font-size:13px;text-align:center;font-weight:600;color:#3b82f6;">{avg_pos_proj}</td>
           <td style="padding:10px 12px;text-align:center;">{badge}</td>
         </tr>"""
 
-    # Build log rows
+    # Build log rows - teraz z pozycja i odwiedzonymi podstronami
     log_rows = ""
     for c in recent:
         ts = c.get("timestamp","")[:16].replace("T"," ")
         status = c.get("status","?")
         sc = "#22c55e" if status == "ok" else "#ef4444"
+        pos = f"#{c['position']}" if c.get("position") else "—"
+        pages = c.get("pages_visited", [])
+        pages_html = ""
+        for url in pages:
+            # Skroc URL do sciezki dla czytelnosci
+            short = url.replace("https://","").replace("http://","")
+            pages_html += f'<div style="font-size:11px;color:#64748b;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:300px;">{short}</div>'
+        if not pages_html:
+            pages_html = '<span style="font-size:11px;color:#cbd5e1;">—</span>'
         log_rows += f"""
         <tr>
           <td style="padding:8px 12px;font-size:12px;color:#64748b;white-space:nowrap;">{ts}</td>
           <td style="padding:8px 12px;font-size:12px;color:#1e293b;">{c.get('project_name','')}</td>
-          <td style="padding:8px 12px;font-size:12px;color:#475569;">{c.get('keyword','')}</td>
-          <td style="padding:8px 12px;font-size:12px;color:#64748b;">{c.get('domain','')}</td>
+          <td style="padding:8px 12px;font-size:12px;color:#475569;max-width:160px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">{c.get('keyword','')}</td>
+          <td style="padding:8px 12px;text-align:center;font-weight:600;font-size:12px;color:#3b82f6;">{pos}</td>
+          <td style="padding:8px 12px;">{pages_html}</td>
           <td style="padding:8px 12px;text-align:center;"><span style="font-size:11px;color:{sc};font-weight:600;">{status}</span></td>
         </tr>"""
 
@@ -200,7 +222,7 @@ tr:hover td {{ background:#f8fafc; }}
       <div class="card">
         <div class="card-title">Klikniecia wg frazy</div>
         <table>
-          <thead><tr><th>Fraza</th><th>Klikniecia</th><th>OK</th></tr></thead>
+          <thead><tr><th>Fraza</th><th>Klikniecia</th><th>OK</th><th>Sr. pozycja</th></tr></thead>
           <tbody>{kw_rows if kw_rows else '<tr><td colspan="3" style="padding:20px;text-align:center;color:#94a3b8;font-size:13px;">Brak danych</td></tr>'}</tbody>
         </table>
       </div>
@@ -215,7 +237,7 @@ tr:hover td {{ background:#f8fafc; }}
     <div class="card">
       <div class="card-title">Status projektow</div>
       <table>
-        <thead><tr><th>Projekt</th><th>Domena</th><th>Dzis / limit</th><th>Lacznie</th><th>Status</th></tr></thead>
+        <thead><tr><th>Projekt</th><th>Domena</th><th>Dzis / limit</th><th>Lacznie</th><th>Sr. pozycja</th><th>Status</th></tr></thead>
         <tbody>{proj_rows if proj_rows else '<tr><td colspan="5" style="padding:20px;text-align:center;color:#94a3b8;font-size:13px;">Brak projektow</td></tr>'}</tbody>
       </table>
     </div>
@@ -225,7 +247,7 @@ tr:hover td {{ background:#f8fafc; }}
     <div class="card">
       <div class="card-title">Historia klikniec (ostatnie 30)</div>
       <table>
-        <thead><tr><th>Czas</th><th>Projekt</th><th>Fraza</th><th>Domena</th><th>Status</th></tr></thead>
+        <thead><tr><th>Czas</th><th>Projekt</th><th>Fraza</th><th>Poz.</th><th>Odwiedzone podstrony</th><th>Status</th></tr></thead>
         <tbody>{log_rows if log_rows else '<tr><td colspan="5" style="padding:20px;text-align:center;color:#94a3b8;font-size:13px;">Brak logow</td></tr>'}</tbody>
       </table>
     </div>
