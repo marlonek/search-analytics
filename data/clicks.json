@@ -186,6 +186,42 @@
         "https://wynajemdzwigu24.pl/"
       ],
       "attempt": 3
+    },
+    {
+      "project_id": "pantomogram24pl",
+      "project_name": "pantomogram24.pl",
+      "domain": "pantomogram24.pl",
+      "keyword": "pantomogram24.pl",
+      "date": "2026-03-28",
+      "timestamp": "2026-03-28T20:54:32",
+      "status": "not_found",
+      "position": null,
+      "pages_visited": [],
+      "attempt": 1
+    },
+    {
+      "project_id": "pantomogram24pl",
+      "project_name": "pantomogram24.pl",
+      "domain": "pantomogram24.pl",
+      "keyword": "https://pantomogram24.pl",
+      "date": "2026-03-28",
+      "timestamp": "2026-03-28T20:55:17",
+      "status": "not_found",
+      "position": null,
+      "pages_visited": [],
+      "attempt": 2
+    },
+    {
+      "project_id": "pantomogram24pl",
+      "project_name": "pantomogram24.pl",
+      "domain": "pantomogram24.pl",
+      "keyword": "rentgen zębów pantomogram24.pl",
+      "date": "2026-03-28",
+      "timestamp": "2026-03-28T20:56:00",
+      "status": "not_found",
+      "position": null,
+      "pages_visited": [],
+      "attempt": 3
     }
   ],
   "last_keywords": {
