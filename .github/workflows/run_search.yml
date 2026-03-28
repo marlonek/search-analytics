@@ -1,0 +1,37 @@
+name: Search & Click Bot
+on:
+  schedule:
+    - cron: '17 6-23 * * *'
+    - cron: '43 0-1 * * *'
+  workflow_dispatch:
+jobs:
+  search:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+      - name: Install dependencies
+        run: |
+          pip install playwright beautifulsoup4 requests
+          playwright install chromium
+      - name: Run searcher
+        run: python scripts/searcher.py
+      - name: Regenerate dashboard
+        run: python scripts/generate_report.py
+      - name: Commit data
+        run: |
+          git config user.email 'bot@github.com'
+          git config user.name 'Analytics Bot'
+          git add data/ docs/
+          git diff --staged --quiet || git commit -m 'Analytics $(date -u)'
+          git push
+      - name: Deploy to Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./docs
