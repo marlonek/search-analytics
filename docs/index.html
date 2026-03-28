@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Search Analytics Dashboard</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<style>
+* { box-sizing:border-box; margin:0; padding:0; }
+body { font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif; background:#f8fafc; color:#1e293b; }
+.header { background:#1e40af; color:white; padding:20px 32px; display:flex; align-items:center; justify-content:space-between; }
+.header h1 { font-size:20px; font-weight:600; }
+.header .sub { font-size:13px; opacity:0.75; margin-top:2px; }
+.updated { font-size:12px; opacity:0.7; }
+.container { max-width:1200px; margin:0 auto; padding:24px 20px; }
+.metrics { display:grid; grid-template-columns:repeat(4,1fr); gap:12px; margin-bottom:20px; }
+.metric { background:white; border:1px solid #e2e8f0; border-radius:10px; padding:16px; }
+.metric-label { font-size:12px; color:#64748b; margin-bottom:4px; }
+.metric-value { font-size:26px; font-weight:600; color:#1e293b; }
+.metric-sub { font-size:11px; color:#94a3b8; margin-top:2px; }
+.grid2 { display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:16px; }
+.card { background:white; border:1px solid #e2e8f0; border-radius:10px; padding:20px; }
+.card-title { font-size:12px; font-weight:600; color:#64748b; text-transform:uppercase; letter-spacing:0.05em; margin-bottom:14px; }
+table { width:100%; border-collapse:collapse; }
+th { font-size:11px; color:#94a3b8; font-weight:500; padding:8px 12px; border-bottom:1px solid #f1f5f9; text-align:left; }
+tr:hover td { background:#f8fafc; }
+.tabs { display:flex; gap:4px; border-bottom:1px solid #e2e8f0; margin-bottom:16px; }
+.tab { padding:8px 16px; font-size:13px; cursor:pointer; color:#64748b; border-bottom:2px solid transparent; margin-bottom:-1px; }
+.tab.active { color:#1e40af; border-bottom-color:#1e40af; font-weight:500; }
+.tab-content { display:none; }
+.tab-content.active { display:block; }
+@media(max-width:768px){
+  .metrics{grid-template-columns:1fr 1fr;}
+  .grid2{grid-template-columns:1fr;}
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div>
+    <div class="h1">Search Analytics Dashboard</div>
+    <div class="sub">Automatyczny monitoring klikniec z Google</div>
+  </div>
+  <div class="updated">Ostatnia aktualizacja: 28.03.2026 08:43</div>
+</div>
+
+<div class="container">
+
+  <div class="metrics">
+    <div class="metric">
+      <div class="metric-label">Klikniecia dzisiaj</div>
+      <div class="metric-value">2</div>
+      <div class="metric-sub">dzien: 2026-03-28</div>
+    </div>
+    <div class="metric">
+      <div class="metric-label">Lacznie wszystkich</div>
+      <div class="metric-value">2</div>
+      <div class="metric-sub">skutecznych: 0</div>
+    </div>
+    <div class="metric">
+      <div class="metric-label">Aktywne projekty</div>
+      <div class="metric-value">2</div>
+      <div class="metric-sub">zdefiniowanych</div>
+    </div>
+    <div class="metric">
+      <div class="metric-label">Slowa kluczowe</div>
+      <div class="metric-value">9</div>
+      <div class="metric-sub">lacznie we wszystkich</div>
+    </div>
+  </div>
+
+  <div class="tabs">
+    <div class="tab active" onclick="switchTab('overview')">Przeglad</div>
+    <div class="tab" onclick="switchTab('projects')">Projekty</div>
+    <div class="tab" onclick="switchTab('logs')">Logi</div>
+  </div>
+
+  <div id="tab-overview" class="tab-content active">
+    <div class="grid2">
+      <div class="card">
+        <div class="card-title">Klikniecia wg frazy</div>
+        <table>
+          <thead><tr><th>Fraza</th><th>Klikniecia</th><th>OK</th></tr></thead>
+          <tbody>
+        <tr>
+          <td style="padding:10px 12px;font-size:13px;color:#1e293b;">warsawhubhotels.pl</td>
+          <td style="padding:10px 12px;">
+            <div style="display:flex;align-items:center;gap:8px;">
+              <div style="flex:1;height:6px;background:#e2e8f0;border-radius:3px;">
+                <div style="width:100%;height:6px;background:#3b82f6;border-radius:3px;"></div>
+              </div>
+              <span style="font-size:13px;font-weight:600;min-width:20px;text-align:right;color:#1e293b;">1</span>
+            </div>
+          </td>
+          <td style="padding:10px 12px;text-align:center;">
+            <span style="font-size:12px;color:#f59e0b;font-weight:600;">0/1</span>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding:10px 12px;font-size:13px;color:#1e293b;">pantomogram zębów pantomogram24.pl</td>
+          <td style="padding:10px 12px;">
+            <div style="display:flex;align-items:center;gap:8px;">
+              <div style="flex:1;height:6px;background:#e2e8f0;border-radius:3px;">
+                <div style="width:100%;height:6px;background:#3b82f6;border-radius:3px;"></div>
+              </div>
+              <span style="font-size:13px;font-weight:600;min-width:20px;text-align:right;color:#1e293b;">1</span>
+            </div>
+          </td>
+          <td style="padding:10px 12px;text-align:center;">
+            <span style="font-size:12px;color:#f59e0b;font-weight:600;">0/1</span>
+          </td>
+        </tr></tbody>
+        </table>
+      </div>
+      <div class="card">
+        <div class="card-title">Ostatnie 7 dni</div>
+        <canvas id="weekChart" style="width:100%;height:200px;"></canvas>
+      </div>
+    </div>
+  </div>
+
+  <div id="tab-projects" class="tab-content">
+    <div class="card">
+      <div class="card-title">Status projektow</div>
+      <table>
+        <thead><tr><th>Projekt</th><th>Domena</th><th>Dzis / limit</th><th>Lacznie</th><th>Status</th></tr></thead>
+        <tbody>
+        <tr>
+          <td style="padding:10px 12px;font-size:13px;font-weight:500;color:#1e293b;">warsawhubhotels.pl</td>
+          <td style="padding:10px 12px;font-size:13px;color:#64748b;">warsawhubhotels.pl</td>
+          <td style="padding:10px 12px;font-size:13px;text-align:center;">1 / 1</td>
+          <td style="padding:10px 12px;font-size:13px;text-align:center;color:#1e293b;">1</td>
+          <td style="padding:10px 12px;text-align:center;"><span style="background:#fef9c3;color:#854d0e;font-size:11px;padding:2px 8px;border-radius:99px;">limit</span></td>
+        </tr>
+        <tr>
+          <td style="padding:10px 12px;font-size:13px;font-weight:500;color:#1e293b;">pantomogram24.pl</td>
+          <td style="padding:10px 12px;font-size:13px;color:#64748b;">pantomogram24.pl</td>
+          <td style="padding:10px 12px;font-size:13px;text-align:center;">1 / 1</td>
+          <td style="padding:10px 12px;font-size:13px;text-align:center;color:#1e293b;">1</td>
+          <td style="padding:10px 12px;text-align:center;"><span style="background:#fef9c3;color:#854d0e;font-size:11px;padding:2px 8px;border-radius:99px;">limit</span></td>
+        </tr></tbody>
+      </table>
+    </div>
+  </div>
+
+  <div id="tab-logs" class="tab-content">
+    <div class="card">
+      <div class="card-title">Historia klikniec (ostatnie 30)</div>
+      <table>
+        <thead><tr><th>Czas</th><th>Projekt</th><th>Fraza</th><th>Domena</th><th>Status</th></tr></thead>
+        <tbody>
+        <tr>
+          <td style="padding:8px 12px;font-size:12px;color:#64748b;white-space:nowrap;">2026-03-28 08:40</td>
+          <td style="padding:8px 12px;font-size:12px;color:#1e293b;">warsawhubhotels.pl</td>
+          <td style="padding:8px 12px;font-size:12px;color:#475569;">warsawhubhotels.pl</td>
+          <td style="padding:8px 12px;font-size:12px;color:#64748b;">warsawhubhotels.pl</td>
+          <td style="padding:8px 12px;text-align:center;"><span style="font-size:11px;color:#ef4444;font-weight:600;">not_found</span></td>
+        </tr>
+        <tr>
+          <td style="padding:8px 12px;font-size:12px;color:#64748b;white-space:nowrap;">2026-03-28 08:40</td>
+          <td style="padding:8px 12px;font-size:12px;color:#1e293b;">pantomogram24.pl</td>
+          <td style="padding:8px 12px;font-size:12px;color:#475569;">pantomogram zębów pantomogram24.pl</td>
+          <td style="padding:8px 12px;font-size:12px;color:#64748b;">pantomogram24.pl</td>
+          <td style="padding:8px 12px;text-align:center;"><span style="font-size:11px;color:#ef4444;font-weight:600;">not_found</span></td>
+        </tr></tbody>
+      </table>
+    </div>
+  </div>
+
+</div>
+
+<script>
+function switchTab(name) {
+  document.querySelectorAll('.tab').forEach((t,i) => {
+    const names = ['overview','projects','logs'];
+    t.classList.toggle('active', names[i] === name);
+  });
+  document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+  document.getElementById('tab-' + name).classList.add('active');
+}
+
+const ctx = document.getElementById('weekChart');
+if (ctx) {
+  new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ["03-22", "03-23", "03-24", "03-25", "03-26", "03-27", "03-28"],
+      datasets: [{ data: [0, 0, 0, 0, 0, 0, 0], backgroundColor: '#bfdbfe', borderColor: '#3b82f6', borderWidth: 1, borderRadius: 4 }]
+    },
+    options: {
+      plugins: { legend: { display: false } },
+      scales: {
+        y: { beginAtZero: true, ticks: { precision: 0, font: { size: 11 } }, grid: { color: 'rgba(0,0,0,0.05)' } },
+        x: { ticks: { font: { size: 11 } }, grid: { display: false } }
+      },
+      responsive: true, maintainAspectRatio: false
+    }
+  });
+}
+</script>
+</body>
+</html>
