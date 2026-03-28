@@ -120,11 +120,63 @@ def human_type(element, text):
             time.sleep(random.uniform(0.3, 0.8))
 
 
+def scroll_page(page):
+    """Scrolluje strone w dol w naturalny sposob - symuluje czytanie."""
+    try:
+        height = page.evaluate("document.body.scrollHeight")
+
+        current = 0
+        while current < height * 0.85:
+            scroll_step = random.randint(200, 500)
+            current += scroll_step
+            page.evaluate(f"window.scrollTo({{top: {current}, behavior: 'smooth'}})")
+            time.sleep(random.uniform(1.2, 3.5))
+
+            # Czasem zatrzymaj sie dluzej - jakby czytal uwazniej
+            if random.random() < 0.25:
+                time.sleep(random.uniform(2.0, 5.0))
+
+        # Lekko wróc do gory (naturalne zachowanie)
+        if random.random() < 0.4:
+            page.evaluate(f"window.scrollTo({{top: current * 0.6, behavior: 'smooth'}})")
+            time.sleep(random.uniform(1.0, 2.0))
+
+    except Exception as e:
+        print(f"  → Scroll: {e}")
+
+
+def click_internal_link(page, domain):
+    """Klika losowy wewnetrzny link. Zwraca True jesli sukces."""
+    try:
+        internal_links = page.locator(
+            f'a[href*="{domain}"]:not([href*="#"]):not([href*="mailto"]):not([href*="tel"]), '
+            f'a[href^="/"]:not([href*="#"]):not([href*="mailto"])'
+        ).all()
+        clickable = [l for l in internal_links if l.is_visible()]
+
+        if not clickable:
+            return False
+
+        chosen = random.choice(clickable[:15])
+        chosen.scroll_into_view_if_needed()
+        time.sleep(random.uniform(1.0, 2.5))
+        chosen.click()
+        page.wait_for_load_state("networkidle", timeout=20000)
+        time.sleep(random.uniform(2.0, 4.0))
+        return True
+    except Exception as e:
+        print(f"  → Nie udalo sie kliknac linku: {e}")
+        return False
+
+
 def search_and_click(page, keyword, domain, action_delay):
     """
     Wyszukaj fraze w Google i kliknij WYLACZNIE nasza domene.
-    Po wejsciu na strone - nigdy nie wracamy do Google.
-    Klikamy losowy wewnetrzny link i zostajemy na stronie.
+    Po wejsciu na strone:
+    - scrolluje strone symulujac czytanie (czas na stronie)
+    - klika 2-3 wewnetrzne linki (glebokosc sesji)
+    - na kazdej podstronie scrolluje i czeka
+    - nigdy nie wraca do Google
     """
     page.set_extra_http_headers({
         "Accept-Language": "pl-PL,pl;q=0.9,en-US;q=0.8,en;q=0.7",
@@ -140,7 +192,7 @@ def search_and_click(page, keyword, domain, action_delay):
         'button:has-text("Zaakceptuj wszystko")',
         'button:has-text("Akceptuję")',
         'button:has-text("Accept all")',
-        '#L2AGLb',  # alternatywny selektor przycisku Google
+        '#L2AGLb',
     ]:
         try:
             btn = page.locator(selector).first
@@ -151,12 +203,10 @@ def search_and_click(page, keyword, domain, action_delay):
         except Exception:
             pass
 
-    # Znajdz pole wyszukiwania
+    # Wpisz fraze jak czlowiek
     search_box = page.locator('textarea[name="q"], input[name="q"]').first
     search_box.click()
     time.sleep(random.uniform(0.6, 1.4))
-
-    # Wpisz fraze jak czlowiek
     human_type(search_box, keyword)
     time.sleep(random.uniform(0.5, 1.5))
     search_box.press("Enter")
@@ -172,44 +222,42 @@ def search_and_click(page, keyword, domain, action_delay):
         print(f"  ✗ Nie znaleziono {domain} dla frazy: '{keyword}'")
         return False
 
-    # Kliknij pierwszy widoczny link do naszej domeny
+    # Kliknij link i wejdz na strone
     target = visible_links[0]
     target.scroll_into_view_if_needed()
     time.sleep(random.uniform(0.8, 2.0))
     target.click()
-
-    # Czekaj na zaladowanie strony - zostajemy tutaj, nie wracamy
     page.wait_for_load_state("networkidle", timeout=30000)
-    time.sleep(random.uniform(3.0, 6.0))  # symuluj czytanie tresci strony
+    time.sleep(random.uniform(2.0, 4.0))
+    print(f"  → Weszlem na strone: {page.url}")
 
-    # Kliknij losowy wewnetrzny link na stronie (symuluj nawigacje uzytkownika)
-    # Wykluczamy linki zewnetrzne, anchor (#), mailto, tel
-    internal_links = page.locator(
-        f'a[href*="{domain}"]:not([href*="#"]):not([href*="mailto"]):not([href*="tel"]), '
-        f'a[href^="/"]:not([href*="#"]):not([href*="mailto"])'
-    ).all()
+    # ── STRONA 1: scroll + czas ──────────────────────────────────────────
+    print(f"  → Scrolluje strone 1...")
+    scroll_page(page)
+    stay_1 = action_delay * 0.4 + random.uniform(3, 8)
+    print(f"  → Czas na stronie 1: {stay_1:.0f}s")
+    time.sleep(stay_1)
 
-    clickable = [l for l in internal_links if l.is_visible()]
+    # ── STRONA 2: pierwszy wewnetrzny link ───────────────────────────────
+    print(f"  → Klikam link wewnetrzny (strona 2)...")
+    if click_internal_link(page, domain):
+        print(f"  → Strona 2: {page.url}")
+        scroll_page(page)
+        stay_2 = action_delay * 0.35 + random.uniform(2, 6)
+        print(f"  → Czas na stronie 2: {stay_2:.0f}s")
+        time.sleep(stay_2)
 
-    if clickable:
-        # Preferuj linki w tresci strony (nie w menu/stopce) - bierz z srodka listy
-        pool = clickable[:15]
-        chosen = random.choice(pool)
-        try:
-            chosen.scroll_into_view_if_needed()
-            time.sleep(random.uniform(1.0, 2.5))
-            chosen.click()
-            page.wait_for_load_state("networkidle", timeout=20000)
-            print(f"  → Kliknieto wewnetrzny link na stronie")
-        except Exception as e:
-            print(f"  → Nie udalo sie kliknac wewnetrznego linku: {e}")
+        # ── STRONA 3: drugi wewnetrzny link (70% szans) ──────────────────
+        if random.random() < 0.70:
+            print(f"  → Klikam link wewnetrzny (strona 3)...")
+            if click_internal_link(page, domain):
+                print(f"  → Strona 3: {page.url}")
+                scroll_page(page)
+                stay_3 = action_delay * 0.25 + random.uniform(2, 5)
+                print(f"  → Czas na stronie 3: {stay_3:.0f}s")
+                time.sleep(stay_3)
 
-    # Zostaj na stronie przez zdefiniowany czas (+/- losowy rozrzut)
-    stay_time = action_delay + random.uniform(-min(3, action_delay * 0.2), 5)
-    stay_time = max(5, stay_time)  # minimum 5 sekund
-    print(f"  → Pozostaje na stronie przez {stay_time:.0f} sekund")
-    time.sleep(stay_time)
-
+    print(f"  ✓ Sesja zakonczona.")
     return True
 
 
