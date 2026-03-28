@@ -511,7 +511,7 @@ def main():
 
             # Przerwa miedzy projektami
             if actions_this_run < MAX_ACTIONS_PER_RUN:
-                pause = random.uniform(45, 120)
+                pause = random.uniform(120, 300)
                 print(f"  Przerwa {pause:.0f}s przed kolejnym projektem...")
                 time.sleep(pause)
 
