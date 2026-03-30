@@ -880,6 +880,78 @@
         "https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fwww.google.com%2Fsearch%3Fnewwindow%3D1%26sca_esv%3Deafbc91c2287ff45%26udm%3D7%26fbs%3DADc_l-aTuuAJ5fCRiMSMSikFOrGF0tVazRsVUAhyhOlgw6ZWYEGOJGTvaWPgA1iClIRqADzXeGBANF_X6XZJqaYOe8DVAvz-tkpfKw5Jc2ipkjs7bEMsUxf-IoXQ6u_d3ZF8w2cQmN0huZz-S4HSdKaGKfeh8Eje7Mqed5oqXibcjylSKZBlqVGc4cyF3omwYAUBpX8wCd-2LbBQBpXI2EHemCiSgNR84N2SYvV-qn0Q4sEFzcFlSKo%26q%3Dus%25C5%2582ugi%2Bd%25C5%25BAwigowe%2Bwynajemdzwigu24.pl%26sa%3DX%26ved%3D2ahUKEwixksj3lceTAxVmMlkFHRwiDY0QtKgLegQIFBAB%26biw%3D1920%26bih%3D1080%26dpr%3D1&dsh=S-1424606252%3A1774858242204055&ec=futura_srp_og_si_72236_p&hl=pl&passive=true&flowName=GlifWebSignIn&flowEntry=ServiceLogin&ifkv=AT1y2_WhJZRZSTxc5b_ItW5yBdqQGHbVASVjZTG4aF4icGnUL7oNRHy_JM71SnCPClbIg73TQ15A"
       ],
       "attempt": 2
+    },
+    {
+      "project_id": "warsawhubhotelspl",
+      "project_name": "warsawhubhotels.pl",
+      "domain": "warsawhubhotels.pl",
+      "keyword": "portal hotelowy warsawhubhotels.pl",
+      "date": "2026-03-30",
+      "timestamp": "2026-03-30T09:49:48",
+      "status": "not_found",
+      "position": null,
+      "pages_visited": [],
+      "attempt": 1
+    },
+    {
+      "project_id": "warsawhubhotelspl",
+      "project_name": "warsawhubhotels.pl",
+      "domain": "warsawhubhotels.pl",
+      "keyword": "ciekawostki o hotelach warsawhubhotels.pl",
+      "date": "2026-03-30",
+      "timestamp": "2026-03-30T09:50:30",
+      "status": "not_found",
+      "position": null,
+      "pages_visited": [],
+      "attempt": 2
+    },
+    {
+      "project_id": "warsawhubhotelspl",
+      "project_name": "warsawhubhotels.pl",
+      "domain": "warsawhubhotels.pl",
+      "keyword": "https://warsawhubhotels.pl",
+      "date": "2026-03-30",
+      "timestamp": "2026-03-30T09:51:01",
+      "status": "not_found",
+      "position": null,
+      "pages_visited": [],
+      "attempt": 3
+    },
+    {
+      "project_id": "pantomogram24pl",
+      "project_name": "pantomogram24.pl",
+      "domain": "pantomogram24.pl",
+      "keyword": "rentgen zębów pantomogram24.pl",
+      "date": "2026-03-30",
+      "timestamp": "2026-03-30T09:54:54",
+      "status": "not_found",
+      "position": null,
+      "pages_visited": [],
+      "attempt": 1
+    },
+    {
+      "project_id": "pantomogram24pl",
+      "project_name": "pantomogram24.pl",
+      "domain": "pantomogram24.pl",
+      "keyword": "rtg zębów pantomogram24.pl",
+      "date": "2026-03-30",
+      "timestamp": "2026-03-30T09:55:26",
+      "status": "not_found",
+      "position": null,
+      "pages_visited": [],
+      "attempt": 2
+    },
+    {
+      "project_id": "pantomogram24pl",
+      "project_name": "pantomogram24.pl",
+      "domain": "pantomogram24.pl",
+      "keyword": "rtg zębów pantomogram24.pl",
+      "date": "2026-03-30",
+      "timestamp": "2026-03-30T09:56:01",
+      "status": "not_found",
+      "position": null,
+      "pages_visited": [],
+      "attempt": 3
     }
   ],
   "last_keywords": {
