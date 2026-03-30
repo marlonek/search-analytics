@@ -852,11 +852,39 @@
       "position": null,
       "pages_visited": [],
       "attempt": 3
+    },
+    {
+      "project_id": "wynajemdzwigu24pl",
+      "project_name": "wynajemdzwigu24.pl",
+      "domain": "wynajemdzwigu24.pl",
+      "keyword": "wynajemdzwigu24.pl",
+      "date": "2026-03-30",
+      "timestamp": "2026-03-30T08:08:56",
+      "status": "not_found",
+      "position": null,
+      "pages_visited": [],
+      "attempt": 1
+    },
+    {
+      "project_id": "wynajemdzwigu24pl",
+      "project_name": "wynajemdzwigu24.pl",
+      "domain": "wynajemdzwigu24.pl",
+      "keyword": "usługi dźwigowe wynajemdzwigu24.pl",
+      "date": "2026-03-30",
+      "timestamp": "2026-03-30T08:10:59",
+      "status": "ok",
+      "position": 5,
+      "pages_visited": [
+        "https://www.google.com/search?q=us%C5%82ugi+d%C5%BAwigowe+wynajemdzwigu24.pl&sca_esv=eafbc91c2287ff45&source=hp&ei=sC_KaYmAL_Xm5NoPz5XK4AQ&iflsig=AFdpzrgAAAAAaco9wJrcJCaB7nr1S-f477iDSYF1ulsy&ved=0ahUKEwiJmMzxlceTAxV1M1kFHc-KEkwQ4dUDCA4&uact=5&oq=us%C5%82ugi+d%C5%BAwigowe+wynajemdzwigu24.pl&gs_lp=Egdnd3Mtd2l6IiR1c8WCdWdpIGTFundpZ293ZSB3eW5hamVtZHp3aWd1MjQucGwyBRAAGO8FMggQABiJBRiiBDIIEAAYgAQYogQyCBAAGIkFGKIEMggQABiABBiiBEjvQlCzCVi9PHABeACQAQCYAVKgAc8JqgECMzS4AQPIAQD4AQGYAiKgAqMKqAIAwgIFEAAYgATCAgUQLhiABMICCxAuGIAEGMcBGNEDwgILEC4YgAQYxwEYrwHCAgYQABgWGB7CAggQABgWGB4YCsICBhAAGB4YDcICCBAAGB4YDRgKwgIIEAAYCBgeGA3CAgcQIRgKGKABwgIEECEYCpgDAfEFAv3RySXYk0aSBwIzNKAH5ssBsgcCMzS4B6MKwgcGNS4yOC4xyAc8gAgB&sclient=gws-wiz&sei=vS_KaeaPC-iv5NoP06Wz2QM",
+        "https://www.google.com/search?newwindow=1&sca_esv=eafbc91c2287ff45&udm=7&fbs=ADc_l-aTuuAJ5fCRiMSMSikFOrGF0tVazRsVUAhyhOlgw6ZWYEGOJGTvaWPgA1iClIRqADzXeGBANF_X6XZJqaYOe8DVAvz-tkpfKw5Jc2ipkjs7bEMsUxf-IoXQ6u_d3ZF8w2cQmN0huZz-S4HSdKaGKfeh8Eje7Mqed5oqXibcjylSKZBlqVGc4cyF3omwYAUBpX8wCd-2LbBQBpXI2EHemCiSgNR84N2SYvV-qn0Q4sEFzcFlSKo&q=us%C5%82ugi+d%C5%BAwigowe+wynajemdzwigu24.pl&sa=X&ved=2ahUKEwixksj3lceTAxVmMlkFHRwiDY0QtKgLegQIFBAB&biw=1920&bih=1080&dpr=1",
+        "https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fwww.google.com%2Fsearch%3Fnewwindow%3D1%26sca_esv%3Deafbc91c2287ff45%26udm%3D7%26fbs%3DADc_l-aTuuAJ5fCRiMSMSikFOrGF0tVazRsVUAhyhOlgw6ZWYEGOJGTvaWPgA1iClIRqADzXeGBANF_X6XZJqaYOe8DVAvz-tkpfKw5Jc2ipkjs7bEMsUxf-IoXQ6u_d3ZF8w2cQmN0huZz-S4HSdKaGKfeh8Eje7Mqed5oqXibcjylSKZBlqVGc4cyF3omwYAUBpX8wCd-2LbBQBpXI2EHemCiSgNR84N2SYvV-qn0Q4sEFzcFlSKo%26q%3Dus%25C5%2582ugi%2Bd%25C5%25BAwigowe%2Bwynajemdzwigu24.pl%26sa%3DX%26ved%3D2ahUKEwixksj3lceTAxVmMlkFHRwiDY0QtKgLegQIFBAB%26biw%3D1920%26bih%3D1080%26dpr%3D1&dsh=S-1424606252%3A1774858242204055&ec=futura_srp_og_si_72236_p&hl=pl&passive=true&flowName=GlifWebSignIn&flowEntry=ServiceLogin&ifkv=AT1y2_WhJZRZSTxc5b_ItW5yBdqQGHbVASVjZTG4aF4icGnUL7oNRHy_JM71SnCPClbIg73TQ15A"
+      ],
+      "attempt": 2
     }
   ],
   "last_keywords": {
     "warsawhubhotelspl": "warsawhubhotels.pl",
-    "wynajemdzwigu24pl": "usługi dźwigiem wynajemdzwigu24.pl",
+    "wynajemdzwigu24pl": "usługi dźwigowe wynajemdzwigu24.pl",
     "pantomogram24pl": "https://pantomogram24.pl"
   }
 }
