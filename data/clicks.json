@@ -2683,10 +2683,120 @@
       "position": null,
       "pages_visited": [],
       "attempt": 3
+    },
+    {
+      "project_id": "wynajemdzwigu24pl",
+      "project_name": "wynajemdzwigu24.pl",
+      "domain": "wynajemdzwigu24.pl",
+      "keyword": "https://wynajemdzwigu24.pl",
+      "date": "2026-04-01",
+      "timestamp": "2026-04-01T21:02:34",
+      "status": "not_found",
+      "position": null,
+      "pages_visited": [],
+      "attempt": 1
+    },
+    {
+      "project_id": "wynajemdzwigu24pl",
+      "project_name": "wynajemdzwigu24.pl",
+      "domain": "wynajemdzwigu24.pl",
+      "keyword": "wynajem dźwigu wynajemdzwigu24.pl",
+      "date": "2026-04-01",
+      "timestamp": "2026-04-01T21:03:12",
+      "status": "not_found",
+      "position": null,
+      "pages_visited": [],
+      "attempt": 2
+    },
+    {
+      "project_id": "wynajemdzwigu24pl",
+      "project_name": "wynajemdzwigu24.pl",
+      "domain": "wynajemdzwigu24.pl",
+      "keyword": "https://wynajemdzwigu24.pl",
+      "date": "2026-04-01",
+      "timestamp": "2026-04-01T21:03:47",
+      "status": "not_found",
+      "position": null,
+      "pages_visited": [],
+      "attempt": 3
+    },
+    {
+      "project_id": "pantomogram24pl",
+      "project_name": "pantomogram24.pl",
+      "domain": "pantomogram24.pl",
+      "keyword": "rentgen zębów pantomogram24.pl",
+      "date": "2026-04-01",
+      "timestamp": "2026-04-01T21:07:03",
+      "status": "not_found",
+      "position": null,
+      "pages_visited": [],
+      "attempt": 1
+    },
+    {
+      "project_id": "pantomogram24pl",
+      "project_name": "pantomogram24.pl",
+      "domain": "pantomogram24.pl",
+      "keyword": "rentgen zębów pantomogram24.pl",
+      "date": "2026-04-01",
+      "timestamp": "2026-04-01T21:07:39",
+      "status": "not_found",
+      "position": null,
+      "pages_visited": [],
+      "attempt": 2
+    },
+    {
+      "project_id": "pantomogram24pl",
+      "project_name": "pantomogram24.pl",
+      "domain": "pantomogram24.pl",
+      "keyword": "rentgen zębów pantomogram24.pl",
+      "date": "2026-04-01",
+      "timestamp": "2026-04-01T21:08:19",
+      "status": "not_found",
+      "position": null,
+      "pages_visited": [],
+      "attempt": 3
+    },
+    {
+      "project_id": "warsawhubhotelspl",
+      "project_name": "warsawhubhotels.pl",
+      "domain": "warsawhubhotels.pl",
+      "keyword": "portal hotelowy warsawhubhotels.pl",
+      "date": "2026-04-01",
+      "timestamp": "2026-04-01T21:12:41",
+      "status": "not_found",
+      "position": null,
+      "pages_visited": [],
+      "attempt": 1
+    },
+    {
+      "project_id": "warsawhubhotelspl",
+      "project_name": "warsawhubhotels.pl",
+      "domain": "warsawhubhotels.pl",
+      "keyword": "portal hotelowy warsawhubhotels.pl",
+      "date": "2026-04-01",
+      "timestamp": "2026-04-01T21:13:27",
+      "status": "not_found",
+      "position": null,
+      "pages_visited": [],
+      "attempt": 2
+    },
+    {
+      "project_id": "warsawhubhotelspl",
+      "project_name": "warsawhubhotels.pl",
+      "domain": "warsawhubhotels.pl",
+      "keyword": "ciekawostki o hotelach warsawhubhotels.pl",
+      "date": "2026-04-01",
+      "timestamp": "2026-04-01T21:15:14",
+      "status": "ok",
+      "position": 4,
+      "pages_visited": [
+        "https://warsawhubhotels.pl/"
+      ],
+      "attempt": 3
     }
   ],
   "last_keywords": {
-    "warsawhubhotelspl": "warsawhubhotels.pl",
+    "warsawhubhotelspl": "ciekawostki o hotelach warsawhubhotels.pl",
     "wynajemdzwigu24pl": "wynajemdzwigu24.pl",
     "pantomogram24pl": "https://pantomogram24.pl"
   }
