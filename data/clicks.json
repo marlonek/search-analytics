@@ -3376,6 +3376,42 @@
         "https://warsawhubhotels.pl/polityka-cookies"
       ],
       "attempt": 1
+    },
+    {
+      "project_id": "pantomogram24pl",
+      "project_name": "pantomogram24.pl",
+      "domain": "pantomogram24.pl",
+      "keyword": "rentgen zębów pantomogram24.pl",
+      "date": "2026-04-02",
+      "timestamp": "2026-04-02T19:22:03",
+      "status": "not_found",
+      "position": null,
+      "pages_visited": [],
+      "attempt": 1
+    },
+    {
+      "project_id": "pantomogram24pl",
+      "project_name": "pantomogram24.pl",
+      "domain": "pantomogram24.pl",
+      "keyword": "rtg zębów pantomogram24.pl",
+      "date": "2026-04-02",
+      "timestamp": "2026-04-02T19:22:46",
+      "status": "not_found",
+      "position": null,
+      "pages_visited": [],
+      "attempt": 2
+    },
+    {
+      "project_id": "pantomogram24pl",
+      "project_name": "pantomogram24.pl",
+      "domain": "pantomogram24.pl",
+      "keyword": "rtg zębów pantomogram24.pl",
+      "date": "2026-04-02",
+      "timestamp": "2026-04-02T19:23:21",
+      "status": "not_found",
+      "position": null,
+      "pages_visited": [],
+      "attempt": 3
     }
   ],
   "last_keywords": {
