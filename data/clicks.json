@@ -3045,11 +3045,111 @@
       "position": null,
       "pages_visited": [],
       "attempt": 3
+    },
+    {
+      "project_id": "warsawhubhotelspl",
+      "project_name": "warsawhubhotels.pl",
+      "domain": "warsawhubhotels.pl",
+      "keyword": "warsawhubhotels.pl",
+      "date": "2026-04-02",
+      "timestamp": "2026-04-02T07:43:21",
+      "status": "not_found",
+      "position": null,
+      "pages_visited": [],
+      "attempt": 1
+    },
+    {
+      "project_id": "warsawhubhotelspl",
+      "project_name": "warsawhubhotels.pl",
+      "domain": "warsawhubhotels.pl",
+      "keyword": "warsawhubhotels.pl",
+      "date": "2026-04-02",
+      "timestamp": "2026-04-02T07:43:53",
+      "status": "not_found",
+      "position": null,
+      "pages_visited": [],
+      "attempt": 2
+    },
+    {
+      "project_id": "warsawhubhotelspl",
+      "project_name": "warsawhubhotels.pl",
+      "domain": "warsawhubhotels.pl",
+      "keyword": "warsawhubhotels.pl",
+      "date": "2026-04-02",
+      "timestamp": "2026-04-02T07:44:33",
+      "status": "not_found",
+      "position": null,
+      "pages_visited": [],
+      "attempt": 3
+    },
+    {
+      "project_id": "pantomogram24pl",
+      "project_name": "pantomogram24.pl",
+      "domain": "pantomogram24.pl",
+      "keyword": "rentgen zębów pantomogram24.pl",
+      "date": "2026-04-02",
+      "timestamp": "2026-04-02T07:48:45",
+      "status": "not_found",
+      "position": null,
+      "pages_visited": [],
+      "attempt": 1
+    },
+    {
+      "project_id": "pantomogram24pl",
+      "project_name": "pantomogram24.pl",
+      "domain": "pantomogram24.pl",
+      "keyword": "pantomogram zębów pantomogram24.pl",
+      "date": "2026-04-02",
+      "timestamp": "2026-04-02T07:49:23",
+      "status": "not_found",
+      "position": null,
+      "pages_visited": [],
+      "attempt": 2
+    },
+    {
+      "project_id": "pantomogram24pl",
+      "project_name": "pantomogram24.pl",
+      "domain": "pantomogram24.pl",
+      "keyword": "rtg zębów pantomogram24.pl",
+      "date": "2026-04-02",
+      "timestamp": "2026-04-02T07:49:57",
+      "status": "not_found",
+      "position": null,
+      "pages_visited": [],
+      "attempt": 3
+    },
+    {
+      "project_id": "wynajemdzwigu24pl",
+      "project_name": "wynajemdzwigu24.pl",
+      "domain": "wynajemdzwigu24.pl",
+      "keyword": "wynajem dźwigów wynajemdzwigu24.pl",
+      "date": "2026-04-02",
+      "timestamp": "2026-04-02T07:53:44",
+      "status": "not_found",
+      "position": null,
+      "pages_visited": [],
+      "attempt": 1
+    },
+    {
+      "project_id": "wynajemdzwigu24pl",
+      "project_name": "wynajemdzwigu24.pl",
+      "domain": "wynajemdzwigu24.pl",
+      "keyword": "usługi dźwigowe wynajemdzwigu24.pl",
+      "date": "2026-04-02",
+      "timestamp": "2026-04-02T07:56:32",
+      "status": "ok",
+      "position": 2,
+      "pages_visited": [
+        "https://wynajemdzwigu24.pl/",
+        "https://wynajemdzwigu24.pl/dzwig-z-kula-do-burzenia/",
+        "https://wynajemdzwigu24.pl/miasto/tumlin-dabrowka/"
+      ],
+      "attempt": 2
     }
   ],
   "last_keywords": {
     "warsawhubhotelspl": "ciekawostki o hotelach warsawhubhotels.pl",
-    "wynajemdzwigu24pl": "wynajemdzwigu24.pl",
+    "wynajemdzwigu24pl": "usługi dźwigowe wynajemdzwigu24.pl",
     "pantomogram24pl": "https://pantomogram24.pl"
   }
 }
