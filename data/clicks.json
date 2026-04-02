@@ -3217,6 +3217,78 @@
       "position": null,
       "pages_visited": [],
       "attempt": 3
+    },
+    {
+      "project_id": "pantomogram24pl",
+      "project_name": "pantomogram24.pl",
+      "domain": "pantomogram24.pl",
+      "keyword": "pantomogram zębów pantomogram24.pl",
+      "date": "2026-04-02",
+      "timestamp": "2026-04-02T14:04:31",
+      "status": "not_found",
+      "position": null,
+      "pages_visited": [],
+      "attempt": 1
+    },
+    {
+      "project_id": "pantomogram24pl",
+      "project_name": "pantomogram24.pl",
+      "domain": "pantomogram24.pl",
+      "keyword": "pantomogram zębów pantomogram24.pl",
+      "date": "2026-04-02",
+      "timestamp": "2026-04-02T14:05:09",
+      "status": "not_found",
+      "position": null,
+      "pages_visited": [],
+      "attempt": 2
+    },
+    {
+      "project_id": "pantomogram24pl",
+      "project_name": "pantomogram24.pl",
+      "domain": "pantomogram24.pl",
+      "keyword": "rtg zębów pantomogram24.pl",
+      "date": "2026-04-02",
+      "timestamp": "2026-04-02T14:05:41",
+      "status": "not_found",
+      "position": null,
+      "pages_visited": [],
+      "attempt": 3
+    },
+    {
+      "project_id": "warsawhubhotelspl",
+      "project_name": "warsawhubhotels.pl",
+      "domain": "warsawhubhotels.pl",
+      "keyword": "warsawhubhotels.pl",
+      "date": "2026-04-02",
+      "timestamp": "2026-04-02T14:10:22",
+      "status": "not_found",
+      "position": null,
+      "pages_visited": [],
+      "attempt": 1
+    },
+    {
+      "project_id": "warsawhubhotelspl",
+      "project_name": "warsawhubhotels.pl",
+      "domain": "warsawhubhotels.pl",
+      "keyword": "https://warsawhubhotels.pl",
+      "date": "2026-04-02",
+      "timestamp": "2026-04-02T14:10:55",
+      "status": "not_found",
+      "position": null,
+      "pages_visited": [],
+      "attempt": 2
+    },
+    {
+      "project_id": "warsawhubhotelspl",
+      "project_name": "warsawhubhotels.pl",
+      "domain": "warsawhubhotels.pl",
+      "keyword": "portal hotelowy warsawhubhotels.pl",
+      "date": "2026-04-02",
+      "timestamp": "2026-04-02T14:11:39",
+      "status": "not_found",
+      "position": null,
+      "pages_visited": [],
+      "attempt": 3
     }
   ],
   "last_keywords": {
