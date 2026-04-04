@@ -4038,11 +4038,39 @@
         "https://warsawhubhotels.pl/polityka-prywatnosci/"
       ],
       "attempt": 1
+    },
+    {
+      "project_id": "wynajemdzwigu24pl",
+      "project_name": "wynajemdzwigu24.pl",
+      "domain": "wynajemdzwigu24.pl",
+      "keyword": "wynajem dźwigów wynajemdzwigu24.pl",
+      "date": "2026-04-04",
+      "timestamp": "2026-04-04T13:26:01",
+      "status": "not_found",
+      "position": null,
+      "pages_visited": [],
+      "attempt": 1
+    },
+    {
+      "project_id": "wynajemdzwigu24pl",
+      "project_name": "wynajemdzwigu24.pl",
+      "domain": "wynajemdzwigu24.pl",
+      "keyword": "usługi dźwigiem wynajemdzwigu24.pl",
+      "date": "2026-04-04",
+      "timestamp": "2026-04-04T13:27:59",
+      "status": "ok",
+      "position": 4,
+      "pages_visited": [
+        "https://wynajemdzwigu24.pl/firmy/uslugi-dzwigiem/",
+        "https://wynajemdzwigu24.pl/miasto/lubin/",
+        "https://wynajemdzwigu24.pl/firmy/uslugi-dzwigowe-koparko-ladowarka-koparka-roboty-ziemne-lubin-euroedil/"
+      ],
+      "attempt": 2
     }
   ],
   "last_keywords": {
     "warsawhubhotelspl": "ciekawostki o hotelach warsawhubhotels.pl",
-    "wynajemdzwigu24pl": "https://wynajemdzwigu24.pl",
+    "wynajemdzwigu24pl": "usługi dźwigiem wynajemdzwigu24.pl",
     "pantomogram24pl": "pantomogram24.pl"
   }
 }
