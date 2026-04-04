@@ -4022,10 +4022,26 @@
         "https://pantomogram24.pl/warszawa/"
       ],
       "attempt": 1
+    },
+    {
+      "project_id": "warsawhubhotelspl",
+      "project_name": "warsawhubhotels.pl",
+      "domain": "warsawhubhotels.pl",
+      "keyword": "ciekawostki o hotelach warsawhubhotels.pl",
+      "date": "2026-04-04",
+      "timestamp": "2026-04-04T11:52:26",
+      "status": "ok",
+      "position": 3,
+      "pages_visited": [
+        "https://warsawhubhotels.pl/",
+        "https://warsawhubhotels.pl/polityka-cookies",
+        "https://warsawhubhotels.pl/polityka-prywatnosci/"
+      ],
+      "attempt": 1
     }
   ],
   "last_keywords": {
-    "warsawhubhotelspl": "warsawhubhotels.pl",
+    "warsawhubhotelspl": "ciekawostki o hotelach warsawhubhotels.pl",
     "wynajemdzwigu24pl": "https://wynajemdzwigu24.pl",
     "pantomogram24pl": "pantomogram24.pl"
   }
