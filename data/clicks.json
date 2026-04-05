@@ -4122,11 +4122,26 @@
         "https://pantomogram24.pl/krakow/"
       ],
       "attempt": 3
+    },
+    {
+      "project_id": "wynajemdzwigu24pl",
+      "project_name": "wynajemdzwigu24.pl",
+      "domain": "wynajemdzwigu24.pl",
+      "keyword": "usługi dźwigowe wynajemdzwigu24.pl",
+      "date": "2026-04-05",
+      "timestamp": "2026-04-05T13:37:14",
+      "status": "ok",
+      "position": 5,
+      "pages_visited": [
+        "https://wynajemdzwigu24.pl/",
+        "https://wynajemdzwigu24.pl/"
+      ],
+      "attempt": 1
     }
   ],
   "last_keywords": {
     "warsawhubhotelspl": "https://warsawhubhotels.pl",
-    "wynajemdzwigu24pl": "usługi dźwigiem wynajemdzwigu24.pl",
+    "wynajemdzwigu24pl": "usługi dźwigowe wynajemdzwigu24.pl",
     "pantomogram24pl": "https://pantomogram24.pl"
   }
 }
