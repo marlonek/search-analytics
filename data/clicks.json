@@ -4066,10 +4066,26 @@
         "https://wynajemdzwigu24.pl/firmy/uslugi-dzwigowe-koparko-ladowarka-koparka-roboty-ziemne-lubin-euroedil/"
       ],
       "attempt": 2
+    },
+    {
+      "project_id": "warsawhubhotelspl",
+      "project_name": "warsawhubhotels.pl",
+      "domain": "warsawhubhotels.pl",
+      "keyword": "https://warsawhubhotels.pl",
+      "date": "2026-04-05",
+      "timestamp": "2026-04-05T09:03:13",
+      "status": "ok",
+      "position": 1,
+      "pages_visited": [
+        "https://warsawhubhotels.pl/",
+        "https://warsawhubhotels.pl/polityka-cookies",
+        "https://warsawhubhotels.pl/polityka-prywatnosci/"
+      ],
+      "attempt": 1
     }
   ],
   "last_keywords": {
-    "warsawhubhotelspl": "ciekawostki o hotelach warsawhubhotels.pl",
+    "warsawhubhotelspl": "https://warsawhubhotels.pl",
     "wynajemdzwigu24pl": "usługi dźwigiem wynajemdzwigu24.pl",
     "pantomogram24pl": "pantomogram24.pl"
   }
