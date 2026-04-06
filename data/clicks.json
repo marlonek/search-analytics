@@ -4137,11 +4137,26 @@
         "https://wynajemdzwigu24.pl/"
       ],
       "attempt": 1
+    },
+    {
+      "project_id": "wynajemdzwigu24pl",
+      "project_name": "wynajemdzwigu24.pl",
+      "domain": "wynajemdzwigu24.pl",
+      "keyword": "wynajemdzwigu24.pl",
+      "date": "2026-04-06",
+      "timestamp": "2026-04-06T09:49:11",
+      "status": "ok",
+      "position": 1,
+      "pages_visited": [
+        "https://wynajemdzwigu24.pl/firmy/uslugi-dzwigowe-dzwigi/",
+        "https://wynajemdzwigu24.pl/firmy/uslugi-dzwigowe-wynajem-dzwigow-xare-sp-z-o-o/"
+      ],
+      "attempt": 1
     }
   ],
   "last_keywords": {
     "warsawhubhotelspl": "https://warsawhubhotels.pl",
-    "wynajemdzwigu24pl": "usługi dźwigowe wynajemdzwigu24.pl",
+    "wynajemdzwigu24pl": "wynajemdzwigu24.pl",
     "pantomogram24pl": "https://pantomogram24.pl"
   }
 }
