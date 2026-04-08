@@ -4364,10 +4364,24 @@
         "https://wynajemdzwigu24.pl/artykuly/"
       ],
       "attempt": 1
+    },
+    {
+      "project_id": "warsawhubhotelspl",
+      "project_name": "warsawhubhotels.pl",
+      "domain": "warsawhubhotels.pl",
+      "keyword": "warsawhubhotels.pl",
+      "date": "2026-04-08",
+      "timestamp": "2026-04-08T11:23:32",
+      "status": "ok",
+      "position": 1,
+      "pages_visited": [
+        "https://warsawhubhotels.pl/"
+      ],
+      "attempt": 1
     }
   ],
   "last_keywords": {
-    "warsawhubhotelspl": "ciekawostki o hotelach warsawhubhotels.pl",
+    "warsawhubhotelspl": "warsawhubhotels.pl",
     "wynajemdzwigu24pl": "wynajemdzwigu24.pl",
     "pantomogram24pl": "https://pantomogram24.pl"
   }
