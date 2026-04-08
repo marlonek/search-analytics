@@ -4414,11 +4414,39 @@
       "position": null,
       "pages_visited": [],
       "attempt": 3
+    },
+    {
+      "project_id": "pantomogram24pl",
+      "project_name": "pantomogram24.pl",
+      "domain": "pantomogram24.pl",
+      "keyword": "rentgen zębów pantomogram24.pl",
+      "date": "2026-04-08",
+      "timestamp": "2026-04-08T15:47:24",
+      "status": "not_found",
+      "position": null,
+      "pages_visited": [],
+      "attempt": 1
+    },
+    {
+      "project_id": "pantomogram24pl",
+      "project_name": "pantomogram24.pl",
+      "domain": "pantomogram24.pl",
+      "keyword": "pantomogram24.pl",
+      "date": "2026-04-08",
+      "timestamp": "2026-04-08T15:49:17",
+      "status": "ok",
+      "position": 1,
+      "pages_visited": [
+        "https://pantomogram24.pl/",
+        "https://pantomogram24.pl/poznan/",
+        "https://pantomogram24.pl/wroclaw/"
+      ],
+      "attempt": 2
     }
   ],
   "last_keywords": {
     "warsawhubhotelspl": "warsawhubhotels.pl",
     "wynajemdzwigu24pl": "wynajemdzwigu24.pl",
-    "pantomogram24pl": "https://pantomogram24.pl"
+    "pantomogram24pl": "pantomogram24.pl"
   }
 }
