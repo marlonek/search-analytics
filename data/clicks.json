@@ -4607,11 +4607,74 @@
         "https://warsawhubhotels.pl/"
       ],
       "attempt": 2
+    },
+    {
+      "project_id": "pantomogram24pl",
+      "project_name": "pantomogram24.pl",
+      "domain": "pantomogram24.pl",
+      "keyword": "rentgen zębów pantomogram24.pl",
+      "date": "2026-04-10",
+      "timestamp": "2026-04-10T09:43:02",
+      "status": "not_found",
+      "position": null,
+      "pages_visited": [],
+      "attempt": 1
+    },
+    {
+      "project_id": "pantomogram24pl",
+      "project_name": "pantomogram24.pl",
+      "domain": "pantomogram24.pl",
+      "keyword": "pantomogram zębów pantomogram24.pl",
+      "date": "2026-04-10",
+      "timestamp": "2026-04-10T09:43:36",
+      "status": "not_found",
+      "position": null,
+      "pages_visited": [],
+      "attempt": 2
+    },
+    {
+      "project_id": "pantomogram24pl",
+      "project_name": "pantomogram24.pl",
+      "domain": "pantomogram24.pl",
+      "keyword": "rentgen zębów pantomogram24.pl",
+      "date": "2026-04-10",
+      "timestamp": "2026-04-10T09:44:23",
+      "status": "not_found",
+      "position": null,
+      "pages_visited": [],
+      "attempt": 3
+    },
+    {
+      "project_id": "wynajemdzwigu24pl",
+      "project_name": "wynajemdzwigu24.pl",
+      "domain": "wynajemdzwigu24.pl",
+      "keyword": "wynajem dźwigów wynajemdzwigu24.pl",
+      "date": "2026-04-10",
+      "timestamp": "2026-04-10T09:47:27",
+      "status": "not_found",
+      "position": null,
+      "pages_visited": [],
+      "attempt": 1
+    },
+    {
+      "project_id": "wynajemdzwigu24pl",
+      "project_name": "wynajemdzwigu24.pl",
+      "domain": "wynajemdzwigu24.pl",
+      "keyword": "usługi dźwigiem wynajemdzwigu24.pl",
+      "date": "2026-04-10",
+      "timestamp": "2026-04-10T09:49:04",
+      "status": "ok",
+      "position": 1,
+      "pages_visited": [
+        "https://www.google.com/search?q=us%C5%82ugi+d%C5%BAwigiem+wynajemdzwigu24.pl&sca_esv=4bcc69982abf93aa&source=hp&ei=QsfYaZzvMPrU5NoPqL_YgQg&iflsig=AFdpzrgAAAAAadjVUv4CozGouw7mg7dSYHVOF-CQ4995&ved=0ahUKEwicmOyzgOOTAxV6KlkFHagfNoAQ4dUDCA4&uact=5&oq=us%C5%82ugi+d%C5%BAwigiem+wynajemdzwigu24.pl&gs_lp=Egdnd3Mtd2l6IiR1c8WCdWdpIGTFundpZ2llbSB3eW5hamVtZHp3aWd1MjQucGwyCBAAGIAEGKIEMgUQABjvBTIFEAAY7wUyCBAAGIAEGKIEMgUQABjvBUjBPFCnCVjaMXABeACQAQCYAUqgAZUMqgECMzS4AQPIAQD4AQGYAiKgAuoMqAIAwgIFEAAYgATCAgUQLhiABMICCxAuGIAEGNEDGMcBwgIGEAAYFhgewgIIEAAYFhgKGB7CAggQABiiBBiJBcICBBAhGArCAgUQIRigAcICBxAhGKABGArCAggQABgIGA0YHpgDAfEFenKB9_I-BbSSBwIzNKAHhqQBsgcCMzS4B-oMwgcHMTIuMjAuMsgHN4AIAA&sclient=gws-wiz&sei=TsfYac-yN5XQ5NoP9JfHsQk",
+        "https://www.google.com/search?q=us%C5%82ugi+d%C5%BAwigiem+wynajemdzwigu24.pl&sca_esv=4bcc69982abf93aa&source=hp&ei=QsfYaZzvMPrU5NoPqL_YgQg&iflsig=AFdpzrgAAAAAadjVUv4CozGouw7mg7dSYHVOF-CQ4995&ved=0ahUKEwicmOyzgOOTAxV6KlkFHagfNoAQ4dUDCA4&uact=5&oq=us%C5%82ugi+d%C5%BAwigiem+wynajemdzwigu24.pl&gs_lp=Egdnd3Mtd2l6IiR1c8WCdWdpIGTFundpZ2llbSB3eW5hamVtZHp3aWd1MjQucGwyCBAAGIAEGKIEMgUQABjvBTIFEAAY7wUyCBAAGIAEGKIEMgUQABjvBUjBPFCnCVjaMXABeACQAQCYAUqgAZUMqgECMzS4AQPIAQD4AQGYAiKgAuoMqAIAwgIFEAAYgATCAgUQLhiABMICCxAuGIAEGNEDGMcBwgIGEAAYFhgewgIIEAAYFhgKGB7CAggQABiiBBiJBcICBBAhGArCAgUQIRigAcICBxAhGKABGArCAggQABgIGA0YHpgDAfEFenKB9_I-BbSSBwIzNKAHhqQBsgcCMzS4B-oMwgcHMTIuMjAuMsgHN4AIAA&sclient=gws-wiz&sei=TsfYac-yN5XQ5NoP9JfHsQk"
+      ],
+      "attempt": 2
     }
   ],
   "last_keywords": {
     "warsawhubhotelspl": "warsawhubhotels.pl",
-    "wynajemdzwigu24pl": "usługi dźwigowe wynajemdzwigu24.pl",
+    "wynajemdzwigu24pl": "usługi dźwigiem wynajemdzwigu24.pl",
     "pantomogram24pl": "pantomogram24.pl"
   }
 }
