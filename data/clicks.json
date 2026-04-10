@@ -4581,10 +4581,36 @@
       "position": null,
       "pages_visited": [],
       "attempt": 3
+    },
+    {
+      "project_id": "warsawhubhotelspl",
+      "project_name": "warsawhubhotels.pl",
+      "domain": "warsawhubhotels.pl",
+      "keyword": "ciekawostki o hotelach warsawhubhotels.pl",
+      "date": "2026-04-10",
+      "timestamp": "2026-04-10T08:03:28",
+      "status": "not_found",
+      "position": null,
+      "pages_visited": [],
+      "attempt": 1
+    },
+    {
+      "project_id": "warsawhubhotelspl",
+      "project_name": "warsawhubhotels.pl",
+      "domain": "warsawhubhotels.pl",
+      "keyword": "warsawhubhotels.pl",
+      "date": "2026-04-10",
+      "timestamp": "2026-04-10T08:04:30",
+      "status": "ok",
+      "position": 1,
+      "pages_visited": [
+        "https://warsawhubhotels.pl/"
+      ],
+      "attempt": 2
     }
   ],
   "last_keywords": {
-    "warsawhubhotelspl": "https://warsawhubhotels.pl",
+    "warsawhubhotelspl": "warsawhubhotels.pl",
     "wynajemdzwigu24pl": "usługi dźwigowe wynajemdzwigu24.pl",
     "pantomogram24pl": "pantomogram24.pl"
   }
