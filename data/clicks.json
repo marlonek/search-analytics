@@ -4801,11 +4801,39 @@
         "https://warsawhubhotels.pl/polityka-cookies"
       ],
       "attempt": 1
+    },
+    {
+      "project_id": "pantomogram24pl",
+      "project_name": "pantomogram24.pl",
+      "domain": "pantomogram24.pl",
+      "keyword": "pantomogram zębów pantomogram24.pl",
+      "date": "2026-04-11",
+      "timestamp": "2026-04-11T13:35:56",
+      "status": "not_found",
+      "position": null,
+      "pages_visited": [],
+      "attempt": 1
+    },
+    {
+      "project_id": "pantomogram24pl",
+      "project_name": "pantomogram24.pl",
+      "domain": "pantomogram24.pl",
+      "keyword": "pantomogram24.pl",
+      "date": "2026-04-11",
+      "timestamp": "2026-04-11T13:38:08",
+      "status": "ok",
+      "position": 1,
+      "pages_visited": [
+        "https://pantomogram24.pl/",
+        "https://pantomogram24.pl/bydgoszcz/",
+        "https://pantomogram24.pl/"
+      ],
+      "attempt": 2
     }
   ],
   "last_keywords": {
     "warsawhubhotelspl": "https://warsawhubhotels.pl",
     "wynajemdzwigu24pl": "usługi dźwigowe wynajemdzwigu24.pl",
-    "pantomogram24pl": "https://pantomogram24.pl"
+    "pantomogram24pl": "pantomogram24.pl"
   }
 }
