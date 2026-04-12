@@ -4829,10 +4829,61 @@
         "https://pantomogram24.pl/"
       ],
       "attempt": 2
+    },
+    {
+      "project_id": "pantomogram24pl",
+      "project_name": "pantomogram24.pl",
+      "domain": "pantomogram24.pl",
+      "keyword": "rentgen zębów pantomogram24.pl",
+      "date": "2026-04-12",
+      "timestamp": "2026-04-12T07:51:53",
+      "status": "not_found",
+      "position": null,
+      "pages_visited": [],
+      "attempt": 1
+    },
+    {
+      "project_id": "pantomogram24pl",
+      "project_name": "pantomogram24.pl",
+      "domain": "pantomogram24.pl",
+      "keyword": "pantomogram zębów pantomogram24.pl",
+      "date": "2026-04-12",
+      "timestamp": "2026-04-12T07:52:28",
+      "status": "not_found",
+      "position": null,
+      "pages_visited": [],
+      "attempt": 2
+    },
+    {
+      "project_id": "pantomogram24pl",
+      "project_name": "pantomogram24.pl",
+      "domain": "pantomogram24.pl",
+      "keyword": "rentgen zębów pantomogram24.pl",
+      "date": "2026-04-12",
+      "timestamp": "2026-04-12T07:53:14",
+      "status": "not_found",
+      "position": null,
+      "pages_visited": [],
+      "attempt": 3
+    },
+    {
+      "project_id": "warsawhubhotelspl",
+      "project_name": "warsawhubhotels.pl",
+      "domain": "warsawhubhotels.pl",
+      "keyword": "ciekawostki o hotelach warsawhubhotels.pl",
+      "date": "2026-04-12",
+      "timestamp": "2026-04-12T07:57:44",
+      "status": "ok",
+      "position": 10,
+      "pages_visited": [
+        "https://www.google.com/search?q=ciekawostki+o+hotelach+warsawhubhotels.pl&sca_esv=fd50da422e8f4301&source=hp&ei=KlDbacnfDqDX5NoP2c_yuQ4&iflsig=AFdpzrgAAAAAadteOlHWeISkA7Q4CQPzxNVvUmKq0Yys&ved=0ahUKEwjJnOKf6-eTAxWgK1kFHdmnPOcQ4dUDCA4&uact=5&oq=ciekawostki+o+hotelach+warsawhubhotels.pl&gs_lp=Egdnd3Mtd2l6IiljaWVrYXdvc3RraSBvIGhvdGVsYWNoIHdhcnNhd2h1YmhvdGVscy5wbDIIEAAYogQYiQUyCBAAGIAEGKIEMggQABiiBBiJBTIFEAAY7wUyCBAAGKIEGIkFSIc-UNMGWL43cAF4AJABAJgBW6AB8Q2qAQI0MbgBA8gBAPgBAZgCKaACzw6oAgDCAgUQABiABMICCxAuGIAEGNEDGMcBwgIFEC4YgATCAgYQABgWGB7CAggQABgWGAoYHsICBRAhGKABwgIFECEYkgPCAgcQIRigARgKwgIEECEYCpgDAfEF1lY1J6iQoumSBwI0MaAHs94BsgcCNDG4B88OwgcHMTQuMjYuMcgHP4AIAA&sclient=gws-wiz&sei=NVDbaceNOrmviLMPhafIoAg",
+        "https://www.google.com/search?newwindow=1&sca_esv=fd50da422e8f4301&udm=2&fbs=ADc_l-aTuuAJ5fCRiMSMSikFOrGF6bdyujK3KN_bbLSQcwMis3qSud1NYjsG0YQq1c8NN37CGaZ3p9YadokRfB6O_Q_uyPG7LdGf1xhjDv1JA-7FAW9Bp4giK59mhJI-vEF0M2Zww6IbMg4GoQcHICc3JSQ_03Yt-7oedmUiKWeCmxgFRzAxxVUQZyMJY6IS4TbsN6tH0tgTaXn6tAZCk6mvOvifvtsJOwSgKRY_AYeAxtie-H_Fp5s&q=ciekawostki+o+hotelach+warsawhubhotels.pl&sa=X&ved=2ahUKEwiY67Ol6-eTAxWYGFkFHXsHOAIQtKgLegQIFRAB&biw=1440&bih=900&dpr=1"
+      ],
+      "attempt": 1
     }
   ],
   "last_keywords": {
-    "warsawhubhotelspl": "https://warsawhubhotels.pl",
+    "warsawhubhotelspl": "ciekawostki o hotelach warsawhubhotels.pl",
     "wynajemdzwigu24pl": "usługi dźwigowe wynajemdzwigu24.pl",
     "pantomogram24pl": "pantomogram24.pl"
   }
