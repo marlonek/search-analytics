@@ -4880,11 +4880,27 @@
         "https://www.google.com/search?newwindow=1&sca_esv=fd50da422e8f4301&udm=2&fbs=ADc_l-aTuuAJ5fCRiMSMSikFOrGF6bdyujK3KN_bbLSQcwMis3qSud1NYjsG0YQq1c8NN37CGaZ3p9YadokRfB6O_Q_uyPG7LdGf1xhjDv1JA-7FAW9Bp4giK59mhJI-vEF0M2Zww6IbMg4GoQcHICc3JSQ_03Yt-7oedmUiKWeCmxgFRzAxxVUQZyMJY6IS4TbsN6tH0tgTaXn6tAZCk6mvOvifvtsJOwSgKRY_AYeAxtie-H_Fp5s&q=ciekawostki+o+hotelach+warsawhubhotels.pl&sa=X&ved=2ahUKEwiY67Ol6-eTAxWYGFkFHXsHOAIQtKgLegQIFRAB&biw=1440&bih=900&dpr=1"
       ],
       "attempt": 1
+    },
+    {
+      "project_id": "wynajemdzwigu24pl",
+      "project_name": "wynajemdzwigu24.pl",
+      "domain": "wynajemdzwigu24.pl",
+      "keyword": "https://wynajemdzwigu24.pl",
+      "date": "2026-04-12",
+      "timestamp": "2026-04-12T09:14:14",
+      "status": "ok",
+      "position": 1,
+      "pages_visited": [
+        "https://wynajemdzwigu24.pl/firmy/uslugi-dzwigowe-dzwigi/",
+        "https://wynajemdzwigu24.pl/firmy/uslugi-dzwigowe-wynajem-dzwigu-robert-chroscielski/",
+        "https://wynajemdzwigu24.pl/miasto/szczecin/"
+      ],
+      "attempt": 1
     }
   ],
   "last_keywords": {
     "warsawhubhotelspl": "ciekawostki o hotelach warsawhubhotels.pl",
-    "wynajemdzwigu24pl": "usługi dźwigowe wynajemdzwigu24.pl",
+    "wynajemdzwigu24pl": "https://wynajemdzwigu24.pl",
     "pantomogram24pl": "pantomogram24.pl"
   }
 }
