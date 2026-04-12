@@ -4896,11 +4896,27 @@
         "https://wynajemdzwigu24.pl/miasto/szczecin/"
       ],
       "attempt": 1
+    },
+    {
+      "project_id": "pantomogram24pl",
+      "project_name": "pantomogram24.pl",
+      "domain": "pantomogram24.pl",
+      "keyword": "https://pantomogram24.pl",
+      "date": "2026-04-12",
+      "timestamp": "2026-04-12T10:08:22",
+      "status": "ok",
+      "position": 1,
+      "pages_visited": [
+        "https://pantomogram24.pl/",
+        "https://pantomogram24.pl/bialystok/",
+        "https://pantomogram24.pl/"
+      ],
+      "attempt": 1
     }
   ],
   "last_keywords": {
     "warsawhubhotelspl": "ciekawostki o hotelach warsawhubhotels.pl",
     "wynajemdzwigu24pl": "https://wynajemdzwigu24.pl",
-    "pantomogram24pl": "pantomogram24.pl"
+    "pantomogram24pl": "https://pantomogram24.pl"
   }
 }
