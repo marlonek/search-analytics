@@ -4928,11 +4928,26 @@
         "https://warsawhubhotels.pl/polityka-prywatnosci/"
       ],
       "attempt": 1
+    },
+    {
+      "project_id": "wynajemdzwigu24pl",
+      "project_name": "wynajemdzwigu24.pl",
+      "domain": "wynajemdzwigu24.pl",
+      "keyword": "usługi dźwigowe wynajemdzwigu24.pl",
+      "date": "2026-04-13",
+      "timestamp": "2026-04-13T14:14:52",
+      "status": "ok",
+      "position": null,
+      "pages_visited": [
+        "https://wynajemdzwigu24.pl/ile-kosztuje-wynajem-dzwigu/",
+        "https://wynajemdzwigu24.pl/artykuly/"
+      ],
+      "attempt": 1
     }
   ],
   "last_keywords": {
     "warsawhubhotelspl": "https://warsawhubhotels.pl",
-    "wynajemdzwigu24pl": "https://wynajemdzwigu24.pl",
+    "wynajemdzwigu24pl": "usługi dźwigowe wynajemdzwigu24.pl",
     "pantomogram24pl": "https://pantomogram24.pl"
   }
 }
