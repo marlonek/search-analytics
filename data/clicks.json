@@ -4912,10 +4912,26 @@
         "https://pantomogram24.pl/"
       ],
       "attempt": 1
+    },
+    {
+      "project_id": "warsawhubhotelspl",
+      "project_name": "warsawhubhotels.pl",
+      "domain": "warsawhubhotels.pl",
+      "keyword": "https://warsawhubhotels.pl",
+      "date": "2026-04-13",
+      "timestamp": "2026-04-13T12:14:37",
+      "status": "ok",
+      "position": 1,
+      "pages_visited": [
+        "https://warsawhubhotels.pl/",
+        "https://warsawhubhotels.pl/polityka-cookies",
+        "https://warsawhubhotels.pl/polityka-prywatnosci/"
+      ],
+      "attempt": 1
     }
   ],
   "last_keywords": {
-    "warsawhubhotelspl": "ciekawostki o hotelach warsawhubhotels.pl",
+    "warsawhubhotelspl": "https://warsawhubhotels.pl",
     "wynajemdzwigu24pl": "https://wynajemdzwigu24.pl",
     "pantomogram24pl": "https://pantomogram24.pl"
   }
