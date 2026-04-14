@@ -5059,11 +5059,26 @@
         "https://pantomogram24.pl/krakow/"
       ],
       "attempt": 2
+    },
+    {
+      "project_id": "wynajemdzwigu24pl",
+      "project_name": "wynajemdzwigu24.pl",
+      "domain": "wynajemdzwigu24.pl",
+      "keyword": "usługi dźwigiem wynajemdzwigu24.pl",
+      "date": "2026-04-14",
+      "timestamp": "2026-04-14T08:08:03",
+      "status": "ok",
+      "position": 4,
+      "pages_visited": [
+        "https://wynajemdzwigu24.pl/",
+        "https://wynajemdzwigu24.pl/wynajem-dzwigu-do-przewodu-komory-normobarycznej/"
+      ],
+      "attempt": 1
     }
   ],
   "last_keywords": {
     "warsawhubhotelspl": "https://warsawhubhotels.pl",
-    "wynajemdzwigu24pl": "usługi dźwigowe wynajemdzwigu24.pl",
+    "wynajemdzwigu24pl": "usługi dźwigiem wynajemdzwigu24.pl",
     "pantomogram24pl": "https://pantomogram24.pl"
   }
 }
