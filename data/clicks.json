@@ -5088,11 +5088,39 @@
         "https://warsawhubhotels.pl/"
       ],
       "attempt": 1
+    },
+    {
+      "project_id": "wynajemdzwigu24pl",
+      "project_name": "wynajemdzwigu24.pl",
+      "domain": "wynajemdzwigu24.pl",
+      "keyword": "wynajem dźwigu wynajemdzwigu24.pl",
+      "date": "2026-04-15",
+      "timestamp": "2026-04-15T00:02:02",
+      "status": "not_found",
+      "position": null,
+      "pages_visited": [],
+      "attempt": 1
+    },
+    {
+      "project_id": "wynajemdzwigu24pl",
+      "project_name": "wynajemdzwigu24.pl",
+      "domain": "wynajemdzwigu24.pl",
+      "keyword": "https://wynajemdzwigu24.pl",
+      "date": "2026-04-15",
+      "timestamp": "2026-04-15T00:04:11",
+      "status": "ok",
+      "position": 1,
+      "pages_visited": [
+        "https://wynajemdzwigu24.pl/firmy/dzwig-pl/",
+        "https://wynajemdzwigu24.pl/firmy/",
+        "https://wynajemdzwigu24.pl/firmy/zurawie-wiezowe-poznan-i-trinac-polska-sp-z-o-o/"
+      ],
+      "attempt": 2
     }
   ],
   "last_keywords": {
     "warsawhubhotelspl": "warsawhubhotels.pl",
-    "wynajemdzwigu24pl": "usługi dźwigiem wynajemdzwigu24.pl",
+    "wynajemdzwigu24pl": "https://wynajemdzwigu24.pl",
     "pantomogram24pl": "https://pantomogram24.pl"
   }
 }
