@@ -5131,11 +5131,50 @@
         "https://www.google.com/search?sca_esv=1e08b7a829cec058&udm=2&fbs=ADc_l-aTuuAJ5fCRiMSMSikFOrGF6bdyujK3KN_bbLSQcwMis2kNFahmS9WLsbK9iuMg6u2kF5XV1dnGg2vN9IPXFWCXrgMq5o7yNK5BRzlM3EspZwMnlo7BxxW32v-yUWNr_O-s5AqPFdB7AieUKpHqcoBJfbT9QeKeeH2MGYzuWFUX_yDoG44hIhNh-LC-twqZsw9St_0oH_olYBSCRHa5_ofG_g0r58195JWdWufaFs4hw8XLOl0&q=portal+hotelowy+warsawhubhotels.pl&sa=X&ved=2ahUKEwj5p9qhs--TAxXLiCsGHeAOITkQtKgLegQIFBAB&biw=1536&bih=864&dpr=1"
       ],
       "attempt": 1
+    },
+    {
+      "project_id": "pantomogram24pl",
+      "project_name": "pantomogram24.pl",
+      "domain": "pantomogram24.pl",
+      "keyword": "pantomogram zębów pantomogram24.pl",
+      "date": "2026-04-15",
+      "timestamp": "2026-04-15T09:54:03",
+      "status": "not_found",
+      "position": null,
+      "pages_visited": [],
+      "attempt": 1
+    },
+    {
+      "project_id": "pantomogram24pl",
+      "project_name": "pantomogram24.pl",
+      "domain": "pantomogram24.pl",
+      "keyword": "rentgen zębów pantomogram24.pl",
+      "date": "2026-04-15",
+      "timestamp": "2026-04-15T09:54:40",
+      "status": "not_found",
+      "position": null,
+      "pages_visited": [],
+      "attempt": 2
+    },
+    {
+      "project_id": "pantomogram24pl",
+      "project_name": "pantomogram24.pl",
+      "domain": "pantomogram24.pl",
+      "keyword": "pantomogram24.pl",
+      "date": "2026-04-15",
+      "timestamp": "2026-04-15T09:56:26",
+      "status": "ok",
+      "position": 1,
+      "pages_visited": [
+        "https://pantomogram24.pl/",
+        "https://pantomogram24.pl/gdynia/"
+      ],
+      "attempt": 3
     }
   ],
   "last_keywords": {
     "warsawhubhotelspl": "portal hotelowy warsawhubhotels.pl",
     "wynajemdzwigu24pl": "https://wynajemdzwigu24.pl",
-    "pantomogram24pl": "https://pantomogram24.pl"
+    "pantomogram24pl": "pantomogram24.pl"
   }
 }
