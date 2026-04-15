@@ -5116,10 +5116,25 @@
         "https://wynajemdzwigu24.pl/firmy/zurawie-wiezowe-poznan-i-trinac-polska-sp-z-o-o/"
       ],
       "attempt": 2
+    },
+    {
+      "project_id": "warsawhubhotelspl",
+      "project_name": "warsawhubhotels.pl",
+      "domain": "warsawhubhotels.pl",
+      "keyword": "portal hotelowy warsawhubhotels.pl",
+      "date": "2026-04-15",
+      "timestamp": "2026-04-15T08:08:38",
+      "status": "ok",
+      "position": 1,
+      "pages_visited": [
+        "https://www.google.com/search?q=portal+hotelowy+warsawhubhotels.pl&sca_esv=1e08b7a829cec058&source=hp&ei=JUffaZnYFLLRkPIPrvLx6A8&iflsig=AFdpzrgAAAAAad9VNfs_JWm7YWbeVHsZkEYc5Gxq3ZPz&ved=0ahUKEwjZ_uWas--TAxWyKEQIHS55HP0Q4dUDCA4&uact=5&oq=portal+hotelowy+warsawhubhotels.pl&gs_lp=Egdnd3Mtd2l6IiJwb3J0YWwgaG90ZWxvd3kgd2Fyc2F3aHViaG90ZWxzLnBsMgUQIRigATIFECEYoAFI-E1Q3QpY-0FwAXgAkAEAmAFboAHmD6oBAjM0uAEDyAEA-AEBmAIioAK7EKgCAMICBRAAGIAEwgIFEC4YgATCAgsQLhiABBjRAxjHAcICCxAuGIAEGMcBGK8BwgIGEAAYFhgewgIIEAAYFhgKGB7CAgUQABjvBcICCBAAGKIEGIkFwgIFECEYnwXCAgcQIRigARgKmAMB8QUdj2jfsomVZpIHAjM0oAfepgGyBwIzNLgHuxDCBwcxNy4xNi4xyAcygAgA&sclient=gws-wiz&sei=M0ffadLSKZq0ruEP9vSH2QU",
+        "https://www.google.com/search?sca_esv=1e08b7a829cec058&udm=2&fbs=ADc_l-aTuuAJ5fCRiMSMSikFOrGF6bdyujK3KN_bbLSQcwMis2kNFahmS9WLsbK9iuMg6u2kF5XV1dnGg2vN9IPXFWCXrgMq5o7yNK5BRzlM3EspZwMnlo7BxxW32v-yUWNr_O-s5AqPFdB7AieUKpHqcoBJfbT9QeKeeH2MGYzuWFUX_yDoG44hIhNh-LC-twqZsw9St_0oH_olYBSCRHa5_ofG_g0r58195JWdWufaFs4hw8XLOl0&q=portal+hotelowy+warsawhubhotels.pl&sa=X&ved=2ahUKEwj5p9qhs--TAxXLiCsGHeAOITkQtKgLegQIFBAB&biw=1536&bih=864&dpr=1"
+      ],
+      "attempt": 1
     }
   ],
   "last_keywords": {
-    "warsawhubhotelspl": "warsawhubhotels.pl",
+    "warsawhubhotelspl": "portal hotelowy warsawhubhotels.pl",
     "wynajemdzwigu24pl": "https://wynajemdzwigu24.pl",
     "pantomogram24pl": "https://pantomogram24.pl"
   }
