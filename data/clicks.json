@@ -5170,10 +5170,37 @@
         "https://pantomogram24.pl/gdynia/"
       ],
       "attempt": 3
+    },
+    {
+      "project_id": "warsawhubhotelspl",
+      "project_name": "warsawhubhotels.pl",
+      "domain": "warsawhubhotels.pl",
+      "keyword": "https://warsawhubhotels.pl",
+      "date": "2026-04-16",
+      "timestamp": "2026-04-16T08:07:58",
+      "status": "not_found",
+      "position": null,
+      "pages_visited": [],
+      "attempt": 1
+    },
+    {
+      "project_id": "warsawhubhotelspl",
+      "project_name": "warsawhubhotels.pl",
+      "domain": "warsawhubhotels.pl",
+      "keyword": "https://warsawhubhotels.pl",
+      "date": "2026-04-16",
+      "timestamp": "2026-04-16T08:09:39",
+      "status": "ok",
+      "position": 1,
+      "pages_visited": [
+        "https://warsawhubhotels.pl/",
+        "https://warsawhubhotels.pl/polityka-cookies"
+      ],
+      "attempt": 2
     }
   ],
   "last_keywords": {
-    "warsawhubhotelspl": "portal hotelowy warsawhubhotels.pl",
+    "warsawhubhotelspl": "https://warsawhubhotels.pl",
     "wynajemdzwigu24pl": "https://wynajemdzwigu24.pl",
     "pantomogram24pl": "pantomogram24.pl"
   }
