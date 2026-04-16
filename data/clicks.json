@@ -5197,11 +5197,50 @@
         "https://warsawhubhotels.pl/polityka-cookies"
       ],
       "attempt": 2
+    },
+    {
+      "project_id": "pantomogram24pl",
+      "project_name": "pantomogram24.pl",
+      "domain": "pantomogram24.pl",
+      "keyword": "rentgen zębów pantomogram24.pl",
+      "date": "2026-04-16",
+      "timestamp": "2026-04-16T14:17:19",
+      "status": "not_found",
+      "position": null,
+      "pages_visited": [],
+      "attempt": 1
+    },
+    {
+      "project_id": "pantomogram24pl",
+      "project_name": "pantomogram24.pl",
+      "domain": "pantomogram24.pl",
+      "keyword": "rentgen zębów pantomogram24.pl",
+      "date": "2026-04-16",
+      "timestamp": "2026-04-16T14:18:06",
+      "status": "not_found",
+      "position": null,
+      "pages_visited": [],
+      "attempt": 2
+    },
+    {
+      "project_id": "pantomogram24pl",
+      "project_name": "pantomogram24.pl",
+      "domain": "pantomogram24.pl",
+      "keyword": "https://pantomogram24.pl",
+      "date": "2026-04-16",
+      "timestamp": "2026-04-16T14:20:08",
+      "status": "ok",
+      "position": 1,
+      "pages_visited": [
+        "https://pantomogram24.pl/",
+        "https://pantomogram24.pl/gdynia/"
+      ],
+      "attempt": 3
     }
   ],
   "last_keywords": {
     "warsawhubhotelspl": "https://warsawhubhotels.pl",
     "wynajemdzwigu24pl": "https://wynajemdzwigu24.pl",
-    "pantomogram24pl": "pantomogram24.pl"
+    "pantomogram24pl": "https://pantomogram24.pl"
   }
 }
