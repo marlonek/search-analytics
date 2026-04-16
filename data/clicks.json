@@ -5236,11 +5236,26 @@
         "https://pantomogram24.pl/gdynia/"
       ],
       "attempt": 3
+    },
+    {
+      "project_id": "wynajemdzwigu24pl",
+      "project_name": "wynajemdzwigu24.pl",
+      "domain": "wynajemdzwigu24.pl",
+      "keyword": "wynajemdzwigu24.pl",
+      "date": "2026-04-16",
+      "timestamp": "2026-04-16T16:05:23",
+      "status": "ok",
+      "position": 1,
+      "pages_visited": [
+        "https://wynajemdzwigu24.pl/firmy/dzwig-uslugi-dzwigowe/",
+        "https://wynajemdzwigu24.pl/kontakt/"
+      ],
+      "attempt": 1
     }
   ],
   "last_keywords": {
     "warsawhubhotelspl": "https://warsawhubhotels.pl",
-    "wynajemdzwigu24pl": "https://wynajemdzwigu24.pl",
+    "wynajemdzwigu24pl": "wynajemdzwigu24.pl",
     "pantomogram24pl": "https://pantomogram24.pl"
   }
 }
