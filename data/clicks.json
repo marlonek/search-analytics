@@ -5267,10 +5267,37 @@
         "https://pantomogram24.pl/poznan/"
       ],
       "attempt": 1
+    },
+    {
+      "project_id": "warsawhubhotelspl",
+      "project_name": "warsawhubhotels.pl",
+      "domain": "warsawhubhotels.pl",
+      "keyword": "ciekawostki o hotelach warsawhubhotels.pl",
+      "date": "2026-04-17",
+      "timestamp": "2026-04-17T11:14:30",
+      "status": "not_found",
+      "position": null,
+      "pages_visited": [],
+      "attempt": 1
+    },
+    {
+      "project_id": "warsawhubhotelspl",
+      "project_name": "warsawhubhotels.pl",
+      "domain": "warsawhubhotels.pl",
+      "keyword": "portal hotelowy warsawhubhotels.pl",
+      "date": "2026-04-17",
+      "timestamp": "2026-04-17T11:16:11",
+      "status": "ok",
+      "position": 1,
+      "pages_visited": [
+        "https://warsawhubhotels.pl/",
+        "https://warsawhubhotels.pl/polityka-cookies"
+      ],
+      "attempt": 2
     }
   ],
   "last_keywords": {
-    "warsawhubhotelspl": "https://warsawhubhotels.pl",
+    "warsawhubhotelspl": "portal hotelowy warsawhubhotels.pl",
     "wynajemdzwigu24pl": "wynajemdzwigu24.pl",
     "pantomogram24pl": "pantomogram24.pl"
   }
