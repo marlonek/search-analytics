@@ -5294,11 +5294,26 @@
         "https://warsawhubhotels.pl/polityka-cookies"
       ],
       "attempt": 2
+    },
+    {
+      "project_id": "wynajemdzwigu24pl",
+      "project_name": "wynajemdzwigu24.pl",
+      "domain": "wynajemdzwigu24.pl",
+      "keyword": "usługi dźwigowe wynajemdzwigu24.pl",
+      "date": "2026-04-17",
+      "timestamp": "2026-04-17T12:11:57",
+      "status": "ok",
+      "position": 1,
+      "pages_visited": [
+        "https://wynajemdzwigu24.pl/",
+        "https://wynajemdzwigu24.pl/dzwig-do-drewna/"
+      ],
+      "attempt": 1
     }
   ],
   "last_keywords": {
     "warsawhubhotelspl": "portal hotelowy warsawhubhotels.pl",
-    "wynajemdzwigu24pl": "wynajemdzwigu24.pl",
+    "wynajemdzwigu24pl": "usługi dźwigowe wynajemdzwigu24.pl",
     "pantomogram24pl": "pantomogram24.pl"
   }
 }
