@@ -5339,11 +5339,27 @@
         "https://pantomogram24.pl/lodz/"
       ],
       "attempt": 1
+    },
+    {
+      "project_id": "wynajemdzwigu24pl",
+      "project_name": "wynajemdzwigu24.pl",
+      "domain": "wynajemdzwigu24.pl",
+      "keyword": "wynajemdzwigu24.pl",
+      "date": "2026-04-18",
+      "timestamp": "2026-04-18T11:54:34",
+      "status": "ok",
+      "position": 1,
+      "pages_visited": [
+        "https://www.google.com/search?q=wynajemdzwigu24.pl&sca_esv=c5f7ccd55e595ca8&source=hp&ei=pHDjafKwBLKzqtsPx66syQI&iflsig=AFdpzrgAAAAAaeN-tN9TMUUYo5Ix31pvoR_yGVxNfcD0&ved=0ahUKEwjyko6sq_eTAxWymWoFHUcXKykQ4dUDCCs&uact=5&oq=wynajemdzwigu24.pl&gs_lp=Egdnd3Mtd2l6IhJ3eW5hamVtZHp3aWd1MjQucGxI9SNQnwZY_xdwAXgAkAEAmAFJoAHYBqoBAjE4uAEDyAEA-AEBmAIPoALwBagCAMICBRAAGIAEwgILEC4YgAQYxwEY0QPCAgsQLhiABBjHARivAcICBRAuGIAEwgIJEAAYgAQYChgLwgIHEAAYgAQYDcICBhAAGB4YDcICCBAAGAgYHhgNwgIFEAAY7wXCAggQABiJBRiiBMICCBAAGIAEGKIEmAMB8QVZhQ6uY346mJIHAjE1oAfCX7IHAjE1uAfwBcIHBjAuMTMuMsgHIIAIAQ&sclient=gws-wiz&sei=rXDjacuGGLWvqtsPhYnCqAw",
+        "https://www.google.com/search?sca_esv=c5f7ccd55e595ca8&q=wynajemdzwigu24.pl&tbm=nws&source=lnms&fbs=ADc_l-aTuuAJ5fCRiMSMSikFOrGF0tVazRsVUAhyhOlgw6ZWYEGOJGTvaWPgA1iClIRqADzXeGBANF_X6XZJqaYOe8DVB6jOdGHa8hW_FjvZUTp8o9jHPtpk4u7HS17uit2mpNQ4Dci83CRytiG_B7SCoVfFNAvHtmwbylQohC5Mb9oEYibNqim3xX3ongStyoPX_gCKZXUzByA70qLT3k98WXiVIYNHAfhHptiPPxj0uC0xSnajQXI&sa=X&ved=2ahUKEwit186wq_eTAxXqmmoFHWxaGxUQ0pQJegQIEhAB&biw=1536&bih=864&dpr=1",
+        "https://www.google.com/search?q=wynajemdzwigu24.pl&sa=X&sca_esv=c5f7ccd55e595ca8&udm=28&fbs=ADc_l-aTuuAJ5fCRiMSMSikFOrGF0tVazRsVUAhyhOlgw6ZWYEGOJGTvaWPgA1iClIRqADzXeGBANF_X6XZJqaYOe8DVB6jOdGHa8hW_FjvZUTp8o9jHPtpk4u7HS17uit2mpNQ4Dci83CRytiG_B7SCoVfFNAvHtmwbylQohC5Mb9oEYibNqim3xX3ongStyoPX_gCKZXUzByA70qLT3k98WXiVIYNHAfhHptiPPxj0uC0xSnajQXI&ved=1t:220175&ictx=111&biw=1536&bih=864&dpr=1"
+      ],
+      "attempt": 1
     }
   ],
   "last_keywords": {
     "warsawhubhotelspl": "warsawhubhotels.pl",
-    "wynajemdzwigu24pl": "usługi dźwigowe wynajemdzwigu24.pl",
+    "wynajemdzwigu24pl": "wynajemdzwigu24.pl",
     "pantomogram24pl": "https://pantomogram24.pl"
   }
 }
