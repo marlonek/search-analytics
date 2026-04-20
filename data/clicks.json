@@ -5466,10 +5466,26 @@
         "https://pantomogram24.pl/gdansk/"
       ],
       "attempt": 1
+    },
+    {
+      "project_id": "warsawhubhotelspl",
+      "project_name": "warsawhubhotels.pl",
+      "domain": "warsawhubhotels.pl",
+      "keyword": "warsawhubhotels.pl",
+      "date": "2026-04-20",
+      "timestamp": "2026-04-20T12:20:31",
+      "status": "ok",
+      "position": 1,
+      "pages_visited": [
+        "https://www.google.com/search?q=warsawhubhotels.pl&sca_esv=56156ec590014018&source=hp&ei=nRnmac2lC_C7ruEP3YGH2Qs&iflsig=AFdpzrgAAAAAaeYnrWY0uOlIgtD2iL3V8ZPQ-ZVDoSXr&ved=0ahUKEwiN6NritPyTAxXwnSsGHd3AIbsQ4dUDCA4&uact=5&oq=warsawhubhotels.pl&gs_lp=Egdnd3Mtd2l6IhJ3YXJzYXdodWJob3RlbHMucGxIjSNQxwdY9xtwAXgAkAEAmAFBoAHHBqoBAjE4uAEDyAEA-AEBmAIQoAKaBqgCAMICBRAAGIAEwgILEC4YgAQYxwEY0QPCAgUQLhiABMICBxAAGIAEGArCAgQQABgewgIFEAAY7wXCAgcQABiABBgNwgIGEAAYHhgNwgIKEAAYCBgeGA0YCsICCBAAGAgYHhgNwgIIEAAYgAQYogTCAggQABiJBRiiBJgDAfEFSbe8gc-uOBuSBwIxNqAHmVuyBwIxNrgHmgbCBwYxLjEzLjLIByOACAE&sclient=gws-wiz&sei=phnmafDnLquHqtsPrKul-Qs",
+        "https://www.google.com/search?newwindow=1&sca_esv=56156ec590014018&q=warsawhubhotels.pl&tbm=nws&source=lnms&fbs=ADc_l-aTuuAJ5fCRiMSMSikFOrGF0tVazRsVUAhyhOlgw6ZWYEGOJGTvaWPgA1iClIRqADzXeGBANF_X6XZJqaYOe8DVLAsumRhMD8kS587vWYxcPZVBVC0yxgCMFuGjG-SFAdAcT9aigeiu9S3kQX8ioPgiyU_T4ydKjFh3hs_o-WkoZgtt55wF8NIkOnRtqdcjvk3kbDeVuYBalo8QQhb9p7S7amrzxE0HltL3r57iBxJPr37AbRo&sa=X&ved=2ahUKEwjClKvntPyTAxWLlmoFHflUJ0cQ0pQJegQIEhAB&biw=1280&bih=720&dpr=1",
+        "https://www.google.com/search?q=warsawhubhotels.pl&newwindow=1&sa=X&sca_esv=56156ec590014018&udm=2&fbs=ADc_l-aTuuAJ5fCRiMSMSikFOrGF0tVazRsVUAhyhOlgw6ZWYEGOJGTvaWPgA1iClIRqADzXeGBANF_X6XZJqaYOe8DVLAsumRhMD8kS587vWYxcPZVBVC0yxgCMFuGjG-SFAdAcT9aigeiu9S3kQX8ioPgiyU_T4ydKjFh3hs_o-WkoZgtt55wF8NIkOnRtqdcjvk3kbDeVuYBalo8QQhb9p7S7amrzxE0HltL3r57iBxJPr37AbRo&ved=2ahUKEwi9icT7tPyTAxXqj2oFHdlfEiIQtKgLegQIAhAO&biw=1280&bih=720&dpr=1"
+      ],
+      "attempt": 1
     }
   ],
   "last_keywords": {
-    "warsawhubhotelspl": "ciekawostki o hotelach warsawhubhotels.pl",
+    "warsawhubhotelspl": "warsawhubhotels.pl",
     "wynajemdzwigu24pl": "usługi dźwigowe wynajemdzwigu24.pl",
     "pantomogram24pl": "https://pantomogram24.pl"
   }
