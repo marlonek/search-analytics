@@ -5664,10 +5664,26 @@
         "https://pantomogram24.pl/szczecin/"
       ],
       "attempt": 3
+    },
+    {
+      "project_id": "warsawhubhotelspl",
+      "project_name": "warsawhubhotels.pl",
+      "domain": "warsawhubhotels.pl",
+      "keyword": "warsawhubhotels.pl",
+      "date": "2026-04-22",
+      "timestamp": "2026-04-22T08:07:02",
+      "status": "ok",
+      "position": 1,
+      "pages_visited": [
+        "https://warsawhubhotels.pl/",
+        "https://warsawhubhotels.pl/polityka-cookies",
+        "https://warsawhubhotels.pl/polityka-prywatnosci/"
+      ],
+      "attempt": 1
     }
   ],
   "last_keywords": {
-    "warsawhubhotelspl": "https://warsawhubhotels.pl",
+    "warsawhubhotelspl": "warsawhubhotels.pl",
     "wynajemdzwigu24pl": "usługi dźwigowe wynajemdzwigu24.pl",
     "pantomogram24pl": "pantomogram24.pl"
   }
