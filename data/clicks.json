@@ -5680,11 +5680,39 @@
         "https://warsawhubhotels.pl/polityka-prywatnosci/"
       ],
       "attempt": 1
+    },
+    {
+      "project_id": "wynajemdzwigu24pl",
+      "project_name": "wynajemdzwigu24.pl",
+      "domain": "wynajemdzwigu24.pl",
+      "keyword": "wynajem dźwigów wynajemdzwigu24.pl",
+      "date": "2026-04-22",
+      "timestamp": "2026-04-22T09:57:30",
+      "status": "not_found",
+      "position": null,
+      "pages_visited": [],
+      "attempt": 1
+    },
+    {
+      "project_id": "wynajemdzwigu24pl",
+      "project_name": "wynajemdzwigu24.pl",
+      "domain": "wynajemdzwigu24.pl",
+      "keyword": "usługi dźwigiem wynajemdzwigu24.pl",
+      "date": "2026-04-22",
+      "timestamp": "2026-04-22T09:59:57",
+      "status": "ok",
+      "position": 4,
+      "pages_visited": [
+        "https://wynajemdzwigu24.pl/",
+        "https://wynajemdzwigu24.pl/kontakt/",
+        "https://wynajemdzwigu24.pl/miasto/warszawa/"
+      ],
+      "attempt": 2
     }
   ],
   "last_keywords": {
     "warsawhubhotelspl": "warsawhubhotels.pl",
-    "wynajemdzwigu24pl": "usługi dźwigowe wynajemdzwigu24.pl",
+    "wynajemdzwigu24pl": "usługi dźwigiem wynajemdzwigu24.pl",
     "pantomogram24pl": "pantomogram24.pl"
   }
 }
