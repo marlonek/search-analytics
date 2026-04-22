@@ -5708,11 +5708,39 @@
         "https://wynajemdzwigu24.pl/miasto/warszawa/"
       ],
       "attempt": 2
+    },
+    {
+      "project_id": "pantomogram24pl",
+      "project_name": "pantomogram24.pl",
+      "domain": "pantomogram24.pl",
+      "keyword": "rentgen zębów pantomogram24.pl",
+      "date": "2026-04-22",
+      "timestamp": "2026-04-22T11:34:40",
+      "status": "not_found",
+      "position": null,
+      "pages_visited": [],
+      "attempt": 1
+    },
+    {
+      "project_id": "pantomogram24pl",
+      "project_name": "pantomogram24.pl",
+      "domain": "pantomogram24.pl",
+      "keyword": "https://pantomogram24.pl",
+      "date": "2026-04-22",
+      "timestamp": "2026-04-22T11:36:32",
+      "status": "ok",
+      "position": 1,
+      "pages_visited": [
+        "https://pantomogram24.pl/",
+        "https://pantomogram24.pl/bialystok/",
+        "https://pantomogram24.pl/lublin/"
+      ],
+      "attempt": 2
     }
   ],
   "last_keywords": {
     "warsawhubhotelspl": "warsawhubhotels.pl",
     "wynajemdzwigu24pl": "usługi dźwigiem wynajemdzwigu24.pl",
-    "pantomogram24pl": "pantomogram24.pl"
+    "pantomogram24pl": "https://pantomogram24.pl"
   }
 }
