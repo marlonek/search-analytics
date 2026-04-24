@@ -5907,11 +5907,26 @@
         "https://warsawhubhotels.pl/"
       ],
       "attempt": 2
+    },
+    {
+      "project_id": "pantomogram24pl",
+      "project_name": "pantomogram24.pl",
+      "domain": "pantomogram24.pl",
+      "keyword": "https://pantomogram24.pl",
+      "date": "2026-04-24",
+      "timestamp": "2026-04-24T14:13:03",
+      "status": "ok",
+      "position": 1,
+      "pages_visited": [
+        "https://pantomogram24.pl/",
+        "https://pantomogram24.pl/bialystok/"
+      ],
+      "attempt": 1
     }
   ],
   "last_keywords": {
     "warsawhubhotelspl": "warsawhubhotels.pl",
     "wynajemdzwigu24pl": "usługi dźwigiem wynajemdzwigu24.pl",
-    "pantomogram24pl": "pantomogram24.pl"
+    "pantomogram24pl": "https://pantomogram24.pl"
   }
 }
