@@ -5965,10 +5965,25 @@
         "https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fwww.google.com%2Fsearch%3Fq%3Dhttps%3A%2F%2Fwynajemdzwigu24.pl%26newwindow%3D1%26sca_esv%3D13320237e8717f63%26udm%3D50%26source%3Dhp%26fbs%3DADc_l-aTuuAJ5fCRiMSMSikFOrGF0tVazRsVUAhyhOlgw6ZWYEGOJGTvaWPgA1iClIRqADzXeGBANF_X6XZJqaYOe8DVLAsumRhMD8kS587vWYxcPZVBVC0yxgCMFuGjG-SFAdAcT9aigeiu9S3kQX8ioPgi1k30cnwAX26rBMisx6Ejwxv7LSGm8lMQI-w-5nkJe6fVlyVMSq0yVt_HybuO5YQ00-wl-8a-jtzG9C3B_r3yyPWNgB8%26aep%3D1%26ntc%3D1%26sa%3DX%26ved%3D2ahUKEwic3rvtwoiUAxXrmmoFHcjFCz4Q2J8OegQIDxAI%26biw%3D1536%26bih%3D864%26dpr%3D1&dsh=S1898549758%3A1777103678864437&ec=futura_srp_og_si_72236_p&hl=pl&passive=true&flowName=GlifWebSignIn&flowEntry=ServiceLogin&ifkv=AT1y2_VNKBdUU5g-nkDnRlXAG8GIgR0ulOo2rGKnsc5w-prI8OYkq27HZLeYzPgfitvvWTB0t8jS-Q"
       ],
       "attempt": 2
+    },
+    {
+      "project_id": "warsawhubhotelspl",
+      "project_name": "warsawhubhotels.pl",
+      "domain": "warsawhubhotels.pl",
+      "keyword": "https://warsawhubhotels.pl",
+      "date": "2026-04-25",
+      "timestamp": "2026-04-25T10:10:04",
+      "status": "ok",
+      "position": 1,
+      "pages_visited": [
+        "https://warsawhubhotels.pl/",
+        "https://warsawhubhotels.pl/polityka-cookies"
+      ],
+      "attempt": 1
     }
   ],
   "last_keywords": {
-    "warsawhubhotelspl": "warsawhubhotels.pl",
+    "warsawhubhotelspl": "https://warsawhubhotels.pl",
     "wynajemdzwigu24pl": "https://wynajemdzwigu24.pl",
     "pantomogram24pl": "pantomogram24.pl"
   }
