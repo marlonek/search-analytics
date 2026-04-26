@@ -6009,11 +6009,38 @@
         "https://wynajemdzwigu24.pl/kontakt/"
       ],
       "attempt": 1
+    },
+    {
+      "project_id": "pantomogram24pl",
+      "project_name": "pantomogram24.pl",
+      "domain": "pantomogram24.pl",
+      "keyword": "rtg zębów pantomogram24.pl",
+      "date": "2026-04-26",
+      "timestamp": "2026-04-26T19:20:28",
+      "status": "not_found",
+      "position": null,
+      "pages_visited": [],
+      "attempt": 1
+    },
+    {
+      "project_id": "pantomogram24pl",
+      "project_name": "pantomogram24.pl",
+      "domain": "pantomogram24.pl",
+      "keyword": "https://pantomogram24.pl",
+      "date": "2026-04-26",
+      "timestamp": "2026-04-26T19:22:04",
+      "status": "ok",
+      "position": 1,
+      "pages_visited": [
+        "https://pantomogram24.pl/",
+        "https://pantomogram24.pl/bydgoszcz/"
+      ],
+      "attempt": 2
     }
   ],
   "last_keywords": {
     "warsawhubhotelspl": "warsawhubhotels.pl",
     "wynajemdzwigu24pl": "wynajem dźwigu wynajemdzwigu24.pl",
-    "pantomogram24pl": "pantomogram24.pl"
+    "pantomogram24pl": "https://pantomogram24.pl"
   }
 }
