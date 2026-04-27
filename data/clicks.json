@@ -6036,11 +6036,27 @@
         "https://pantomogram24.pl/bydgoszcz/"
       ],
       "attempt": 2
+    },
+    {
+      "project_id": "wynajemdzwigu24pl",
+      "project_name": "wynajemdzwigu24.pl",
+      "domain": "wynajemdzwigu24.pl",
+      "keyword": "https://wynajemdzwigu24.pl",
+      "date": "2026-04-27",
+      "timestamp": "2026-04-27T11:24:01",
+      "status": "ok",
+      "position": 1,
+      "pages_visited": [
+        "https://wynajemdzwigu24.pl/firmy/dzwig-uslugi-dzwigowe/",
+        "https://wynajemdzwigu24.pl/kontakt/",
+        "https://wynajemdzwigu24.pl/miasto/zlotow/"
+      ],
+      "attempt": 1
     }
   ],
   "last_keywords": {
     "warsawhubhotelspl": "warsawhubhotels.pl",
-    "wynajemdzwigu24pl": "wynajem dźwigu wynajemdzwigu24.pl",
+    "wynajemdzwigu24pl": "https://wynajemdzwigu24.pl",
     "pantomogram24pl": "https://pantomogram24.pl"
   }
 }
