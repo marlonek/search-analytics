@@ -6067,10 +6067,26 @@
         "https://pantomogram24.pl/gdansk/"
       ],
       "attempt": 1
+    },
+    {
+      "project_id": "warsawhubhotelspl",
+      "project_name": "warsawhubhotels.pl",
+      "domain": "warsawhubhotels.pl",
+      "keyword": "portal hotelowy warsawhubhotels.pl",
+      "date": "2026-04-27",
+      "timestamp": "2026-04-27T20:23:18",
+      "status": "ok",
+      "position": 1,
+      "pages_visited": [
+        "https://warsawhubhotels.pl/",
+        "https://warsawhubhotels.pl/polityka-cookies",
+        "https://warsawhubhotels.pl/polityka-cookies"
+      ],
+      "attempt": 1
     }
   ],
   "last_keywords": {
-    "warsawhubhotelspl": "warsawhubhotels.pl",
+    "warsawhubhotelspl": "portal hotelowy warsawhubhotels.pl",
     "wynajemdzwigu24pl": "https://wynajemdzwigu24.pl",
     "pantomogram24pl": "pantomogram24.pl"
   }
