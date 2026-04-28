@@ -6083,11 +6083,39 @@
         "https://warsawhubhotels.pl/polityka-cookies"
       ],
       "attempt": 1
+    },
+    {
+      "project_id": "wynajemdzwigu24pl",
+      "project_name": "wynajemdzwigu24.pl",
+      "domain": "wynajemdzwigu24.pl",
+      "keyword": "wynajem dźwigów wynajemdzwigu24.pl",
+      "date": "2026-04-28",
+      "timestamp": "2026-04-28T08:41:37",
+      "status": "not_found",
+      "position": null,
+      "pages_visited": [],
+      "attempt": 1
+    },
+    {
+      "project_id": "wynajemdzwigu24pl",
+      "project_name": "wynajemdzwigu24.pl",
+      "domain": "wynajemdzwigu24.pl",
+      "keyword": "usługi dźwigiem wynajemdzwigu24.pl",
+      "date": "2026-04-28",
+      "timestamp": "2026-04-28T08:44:15",
+      "status": "ok",
+      "position": 4,
+      "pages_visited": [
+        "https://wynajemdzwigu24.pl/",
+        "https://wynajemdzwigu24.pl/dzwig-do-wiezby-dachowej/",
+        "https://wynajemdzwigu24.pl/miasto/krakow/"
+      ],
+      "attempt": 2
     }
   ],
   "last_keywords": {
     "warsawhubhotelspl": "portal hotelowy warsawhubhotels.pl",
-    "wynajemdzwigu24pl": "https://wynajemdzwigu24.pl",
+    "wynajemdzwigu24pl": "usługi dźwigiem wynajemdzwigu24.pl",
     "pantomogram24pl": "pantomogram24.pl"
   }
 }
