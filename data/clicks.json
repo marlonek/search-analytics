@@ -6375,11 +6375,51 @@
         "https://warsawhubhotels.pl/regulamin/"
       ],
       "attempt": 1
+    },
+    {
+      "project_id": "wynajemdzwigu24pl",
+      "project_name": "wynajemdzwigu24.pl",
+      "domain": "wynajemdzwigu24.pl",
+      "keyword": "usługi dźwigiem wynajemdzwigu24.pl",
+      "date": "2026-04-30",
+      "timestamp": "2026-04-30T11:14:06",
+      "status": "not_found",
+      "position": null,
+      "pages_visited": [],
+      "attempt": 1
+    },
+    {
+      "project_id": "wynajemdzwigu24pl",
+      "project_name": "wynajemdzwigu24.pl",
+      "domain": "wynajemdzwigu24.pl",
+      "keyword": "wynajem dźwigów wynajemdzwigu24.pl",
+      "date": "2026-04-30",
+      "timestamp": "2026-04-30T11:14:46",
+      "status": "not_found",
+      "position": null,
+      "pages_visited": [],
+      "attempt": 2
+    },
+    {
+      "project_id": "wynajemdzwigu24pl",
+      "project_name": "wynajemdzwigu24.pl",
+      "domain": "wynajemdzwigu24.pl",
+      "keyword": "usługi dźwigowe wynajemdzwigu24.pl",
+      "date": "2026-04-30",
+      "timestamp": "2026-04-30T11:17:25",
+      "status": "ok",
+      "position": 8,
+      "pages_visited": [
+        "https://wynajemdzwigu24.pl/",
+        "https://wynajemdzwigu24.pl/miasto/tychy/",
+        "https://wynajemdzwigu24.pl/"
+      ],
+      "attempt": 3
     }
   ],
   "last_keywords": {
     "warsawhubhotelspl": "https://warsawhubhotels.pl",
-    "wynajemdzwigu24pl": "https://wynajemdzwigu24.pl",
+    "wynajemdzwigu24pl": "usługi dźwigowe wynajemdzwigu24.pl",
     "pantomogram24pl": "https://pantomogram24.pl"
   }
 }
