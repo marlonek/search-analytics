@@ -6415,11 +6415,99 @@
         "https://wynajemdzwigu24.pl/"
       ],
       "attempt": 3
+    },
+    {
+      "project_id": "pantomogram24pl",
+      "project_name": "pantomogram24.pl",
+      "domain": "pantomogram24.pl",
+      "keyword": "rentgen zębów pantomogram24.pl",
+      "date": "2026-05-01",
+      "timestamp": "2026-05-01T00:06:59",
+      "status": "not_found",
+      "position": null,
+      "pages_visited": [],
+      "attempt": 1
+    },
+    {
+      "project_id": "pantomogram24pl",
+      "project_name": "pantomogram24.pl",
+      "domain": "pantomogram24.pl",
+      "keyword": "rentgen zębów pantomogram24.pl",
+      "date": "2026-05-01",
+      "timestamp": "2026-05-01T00:07:40",
+      "status": "not_found",
+      "position": null,
+      "pages_visited": [],
+      "attempt": 2
+    },
+    {
+      "project_id": "pantomogram24pl",
+      "project_name": "pantomogram24.pl",
+      "domain": "pantomogram24.pl",
+      "keyword": "rentgen zębów pantomogram24.pl",
+      "date": "2026-05-01",
+      "timestamp": "2026-05-01T00:08:20",
+      "status": "not_found",
+      "position": null,
+      "pages_visited": [],
+      "attempt": 3
+    },
+    {
+      "project_id": "warsawhubhotelspl",
+      "project_name": "warsawhubhotels.pl",
+      "domain": "warsawhubhotels.pl",
+      "keyword": "warsawhubhotels.pl",
+      "date": "2026-05-01",
+      "timestamp": "2026-05-01T00:12:12",
+      "status": "not_found",
+      "position": null,
+      "pages_visited": [],
+      "attempt": 1
+    },
+    {
+      "project_id": "warsawhubhotelspl",
+      "project_name": "warsawhubhotels.pl",
+      "domain": "warsawhubhotels.pl",
+      "keyword": "ciekawostki o hotelach warsawhubhotels.pl",
+      "date": "2026-05-01",
+      "timestamp": "2026-05-01T00:12:54",
+      "status": "not_found",
+      "position": null,
+      "pages_visited": [],
+      "attempt": 2
+    },
+    {
+      "project_id": "warsawhubhotelspl",
+      "project_name": "warsawhubhotels.pl",
+      "domain": "warsawhubhotels.pl",
+      "keyword": "portal hotelowy warsawhubhotels.pl",
+      "date": "2026-05-01",
+      "timestamp": "2026-05-01T00:13:32",
+      "status": "not_found",
+      "position": null,
+      "pages_visited": [],
+      "attempt": 3
+    },
+    {
+      "project_id": "wynajemdzwigu24pl",
+      "project_name": "wynajemdzwigu24.pl",
+      "domain": "wynajemdzwigu24.pl",
+      "keyword": "https://wynajemdzwigu24.pl",
+      "date": "2026-05-01",
+      "timestamp": "2026-05-01T00:18:59",
+      "status": "ok",
+      "position": 1,
+      "pages_visited": [
+        "https://wynajemdzwigu24.pl/",
+        "https://wynajemdzwigu24.pl/kontakt/",
+        "https://wynajemdzwigu24.pl/miasto/ksawerow/"
+      ],
+      "attempt": 1
     }
   ],
   "last_keywords": {
     "warsawhubhotelspl": "https://warsawhubhotels.pl",
-    "wynajemdzwigu24pl": "usługi dźwigowe wynajemdzwigu24.pl",
+    "wynajemdzwigu24pl": "https://wynajemdzwigu24.pl",
     "pantomogram24pl": "https://pantomogram24.pl"
   }
 }
