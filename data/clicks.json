@@ -6503,10 +6503,48 @@
         "https://wynajemdzwigu24.pl/miasto/ksawerow/"
       ],
       "attempt": 1
+    },
+    {
+      "project_id": "warsawhubhotelspl",
+      "project_name": "warsawhubhotels.pl",
+      "domain": "warsawhubhotels.pl",
+      "keyword": "portal hotelowy warsawhubhotels.pl",
+      "date": "2026-05-01",
+      "timestamp": "2026-05-01T08:29:45",
+      "status": "not_found",
+      "position": null,
+      "pages_visited": [],
+      "attempt": 1
+    },
+    {
+      "project_id": "warsawhubhotelspl",
+      "project_name": "warsawhubhotels.pl",
+      "domain": "warsawhubhotels.pl",
+      "keyword": "portal hotelowy warsawhubhotels.pl",
+      "date": "2026-05-01",
+      "timestamp": "2026-05-01T08:30:29",
+      "status": "not_found",
+      "position": null,
+      "pages_visited": [],
+      "attempt": 2
+    },
+    {
+      "project_id": "warsawhubhotelspl",
+      "project_name": "warsawhubhotels.pl",
+      "domain": "warsawhubhotels.pl",
+      "keyword": "ciekawostki o hotelach warsawhubhotels.pl",
+      "date": "2026-05-01",
+      "timestamp": "2026-05-01T08:32:22",
+      "status": "ok",
+      "position": 6,
+      "pages_visited": [
+        "https://warsawhubhotels.pl/"
+      ],
+      "attempt": 3
     }
   ],
   "last_keywords": {
-    "warsawhubhotelspl": "https://warsawhubhotels.pl",
+    "warsawhubhotelspl": "ciekawostki o hotelach warsawhubhotels.pl",
     "wynajemdzwigu24pl": "https://wynajemdzwigu24.pl",
     "pantomogram24pl": "https://pantomogram24.pl"
   }
